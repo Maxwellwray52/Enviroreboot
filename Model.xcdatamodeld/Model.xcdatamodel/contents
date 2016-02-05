@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="14F1021" minimumToolsVersion="Xcode 7.0">
+    <entity name="Bugs" representedClassName=".Bugs" syncable="YES">
+        <attribute name="bug1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bug2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bug3" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bug4" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bug5" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bug6" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bug7" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bug8" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bug9" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bug10" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bug11" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bug12" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bug13" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bug14" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bug15" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bug16" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bug17" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bug18" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bug19" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bug20" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bug21" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bug22" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bug23" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bug24" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bug25" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bug26" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="bug27" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="tolerance" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="Front" representedClassName=".Front" syncable="YES">
+        <attribute name="additional" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="air" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="stamp" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="temperature" optional="YES" attributeType="Integer 16" minValueString="0" maxValueString="100" defaultValueString="50" syncable="YES"/>
+        <attribute name="water" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="weather" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Habitat" representedClassName=".Habitat" syncable="YES">
+        <attribute name="hindex" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="pick1value" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
+        <attribute name="pick2label" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pick3value" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
+        <attribute name="pick4value" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
+        <attribute name="pick5value" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
+        <attribute name="pick6value" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
+        <attribute name="pick7value" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
+        <attribute name="pick8value" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="picker1label" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="picker2value" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
+        <attribute name="picker3label" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="picker4label" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="picker5label" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="picker6label" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="picker7label" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="picker8" optional="YES" attributeType="Double" defaultValueString="0" syncable="YES"/>
+        <attribute name="picker8label" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Result" representedClassName=".Result" syncable="YES"/>
+    <elements>
+        <element name="Bugs" positionX="-63" positionY="-18" width="128" height="465"/>
+        <element name="Front" positionX="-54" positionY="144" width="128" height="150"/>
+        <element name="Habitat" positionX="-36" positionY="153" width="128" height="315"/>
+        <element name="Result" positionX="-18" positionY="162" width="128" height="45"/>
+    </elements>
+</model>
