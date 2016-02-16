@@ -8,7 +8,7 @@
         <!--First-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="Enviroreboot" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="page1" id="9pv-A4-QxB" customClass="FirstViewController" customModule="Enviroreboot" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
@@ -111,7 +111,7 @@
         <!--Second-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="Enviroreboot" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="page2" id="8rJ-Kc-sve" customClass="SecondViewController" customModule="Enviroreboot" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
@@ -323,7 +323,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                <tabBarController restorationIdentifier="tab1" id="49e-Tb-3d3" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
@@ -345,7 +345,7 @@
         <!--page5-->
         <scene sceneID="s14-yT-Vlw">
             <objects>
-                <viewController id="yyd-mI-9Bz" customClass="Page5ViewController" customModule="Enviroreboot" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="page5" id="yyd-mI-9Bz" customClass="Page5ViewController" customModule="Enviroreboot" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LKD-vw-CJW"/>
                         <viewControllerLayoutGuide type="bottom" id="0KE-Mg-UNR"/>
@@ -374,7 +374,7 @@
         <!--Page 4-->
         <scene sceneID="Dc6-3g-0An">
             <objects>
-                <viewController id="fSB-MP-MDr" customClass="Page4ViewController" customModule="Enviroreboot" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="page4" id="fSB-MP-MDr" customClass="Page4ViewController" customModule="Enviroreboot" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xcC-Qk-KbG"/>
                         <viewControllerLayoutGuide type="bottom" id="Ab2-sP-XbP"/>
@@ -432,7 +432,7 @@
         <!--Page 3-->
         <scene sceneID="n1K-Qs-dIr">
             <objects>
-                <viewController id="h0k-rB-JDa" customClass="Page3ViewController" customModule="Enviroreboot" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="page3" id="h0k-rB-JDa" customClass="Page3ViewController" customModule="Enviroreboot" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ABB-Wb-kaZ"/>
                         <viewControllerLayoutGuide type="bottom" id="qZk-Hw-OC6"/>

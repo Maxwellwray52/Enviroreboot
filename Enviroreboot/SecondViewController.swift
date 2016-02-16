@@ -93,7 +93,7 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate,UI
     @IBAction func savedtwo(sender: AnyObject) {
         
         // creates entity description
-      //  let entityDescription = NSEntityDescription.entityForName("Bugs", inManagedObjectContext: managedObjectContext)
+       let entityDescription = NSEntityDescription.entityForName("Bugs", inManagedObjectContext: managedObjectContext)
         // second is an instance of the bugs identity
         let second = Bugs(entity: entityDescription!, insertIntoManagedObjectContext: managedObjectContext)
         // attributes are set to values of the textfields
@@ -291,7 +291,7 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate,UI
         // fetches data
         //accesses application delegate to obtain managed object context
         let appdelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-       // let managedcontext = appdelegate.managedObjectContext
+       let managedcontext = appdelegate.managedObjectContext
         // fetch request
         let fetchrequest = NSFetchRequest(entityName: "Bugs")
         // filters request to return tolerance value

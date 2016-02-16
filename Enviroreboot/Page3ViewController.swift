@@ -63,8 +63,8 @@ class Page3ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         // habitat attributes are set to labels and numerical picker values
         third.picker1label = waterpickerlabel.text!
         third.pick1value = picker1selection
-        third.picker2label = erosionpickerlabel.text!
-        third.pick2value = picker2selection
+        third.pick2label = erosionpickerlabel.text!
+        third.picker2value = picker2selection
         third.picker3label = vegetationpickerlabel.text!
         third.pick3value = picker3selection
         third.picker4label = streamcoverpickerlabel.text!
