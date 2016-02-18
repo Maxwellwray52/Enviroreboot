@@ -9,6 +9,8 @@
 import UIKit
 import CoreData
 class FirstViewController: UIViewController {
+    // key value for this page
+    var sampleID: Int?
     //accesses managed object context
     let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     // properties of first page
@@ -77,7 +79,24 @@ class FirstViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+// restores state of the view controller 
+    override func encodeRestorableStateWithCoder(coder: NSCoder) {
+        // saves id for current view with encoder
+        if let sampleID = sampleID {
+            coder.encodeInteger(sampleID, forKey:"sampleID")
+        }
+        //calls super so inherited state functionality will occur
+        super.encodeRestorableStateWithCoder(coder)
+    }
+// decodes ID and sets it back to view Controller's ID property
+    override func decodeRestorableStateWithCoder(coder: NSCoder) {
+        sampleID = coder.decodeIntegerForKey("sampleID")
+        super.decodeRestorableStateWithCoder(coder)
+    }
+    // completes restoration of view controller and restores view based on decoded ID
+    override func applicationFinishedRestoringState() {
+    guard let sampleID = sampleID else { return }
+    }
 
 }
 

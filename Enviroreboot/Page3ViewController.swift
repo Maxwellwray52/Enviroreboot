@@ -9,7 +9,8 @@
 import UIKit
 import CoreData
 class Page3ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource  {
-
+// key ID for this page
+    var abioticID: Int?
     //accesses managed object context
     let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     //outlets for pickerviews
@@ -385,6 +386,27 @@ class Page3ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             healthindex = (selection1 + selection2 + selection3)/8
         }
     }
+        // restores state of the view controller
+        override func encodeRestorableStateWithCoder(coder: NSCoder) {
+            // saves id for current view with encoder
+            if let abioticID = abioticID {
+                coder.encodeInteger(abioticID, forKey:"abioticID")
+            }
+            //calls super so inherited state functionality will occur
+            super.encodeRestorableStateWithCoder(coder)
+        }
+        // decodes ID and sets it back to view Controller's ID property
+        override func decodeRestorableStateWithCoder(coder: NSCoder) {
+            abioticID = coder.decodeIntegerForKey("abioticID")
+            super.decodeRestorableStateWithCoder(coder)
+        }
+        // completes restoration of view controller and restores view based on decoded ID
+        override func applicationFinishedRestoringState() {
+            guard let abioticID = abioticID else { return }
+        }
+        
+
+    }
 
 
     /*
@@ -397,4 +419,4 @@ class Page3ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     }
     */
 
-}
+//}

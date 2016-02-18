@@ -9,7 +9,8 @@
 import UIKit
 import CoreData
 class Page4ViewController: UIViewController {
-
+// key id for this page
+    var resultsID: Int?
     @IBOutlet weak var displayhealth: UILabel!
     @IBOutlet weak var displaytolerance: UILabel!
     
@@ -55,6 +56,26 @@ class Page4ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    // restores state of the view controller
+    override func encodeRestorableStateWithCoder(coder: NSCoder) {
+        // saves id for current view with encoder
+        if let resultsID = resultsID {
+            coder.encodeInteger(resultsID, forKey:"resultsID")
+        }
+        //calls super so inherited state functionality will occur
+        super.encodeRestorableStateWithCoder(coder)
+    }
+    // decodes ID and sets it back to view Controller's ID property
+    override func decodeRestorableStateWithCoder(coder: NSCoder) {
+        resultsID = coder.decodeIntegerForKey("resultsID")
+        super.decodeRestorableStateWithCoder(coder)
+    }
+    // completes restoration of view controller and restores view based on decoded ID
+    override func applicationFinishedRestoringState() {
+        guard let resultsID = resultsID else { return }
+    }
+    
+
     
 
     /*

@@ -9,7 +9,8 @@
 import UIKit
 import CoreData
 class Page5ViewController: UIViewController {
-
+// key ID for this page
+    var recordsID: Int?
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,6 +22,24 @@ class Page5ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // restores state of the view controller
+    override func encodeRestorableStateWithCoder(coder: NSCoder) {
+        // saves id for current view with encoder
+        if let recordsID = recordsID {
+            coder.encodeInteger(recordsID, forKey:"recordsID")
+        }
+        //calls super so inherited state functionality will occur
+        super.encodeRestorableStateWithCoder(coder)
+    }
+    // decodes ID and sets it back to view Controller's ID property
+    override func decodeRestorableStateWithCoder(coder: NSCoder) {
+        recordsID = coder.decodeIntegerForKey("recordsID")
+        super.decodeRestorableStateWithCoder(coder)
+    }
+    // completes restoration of view controller and restores view based on decoded ID
+    override func applicationFinishedRestoringState() {
+        guard let recordsID = recordsID else { return }
+    }
 
     /*
     // MARK: - Navigation

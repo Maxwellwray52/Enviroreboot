@@ -10,11 +10,12 @@ import UIKit
 import CoreData
 import MobileCoreServices
 class SecondViewController: UIViewController, UIImagePickerControllerDelegate,UINavigationControllerDelegate {
-
+// Key ID for this page
+    var MacroorganismID: Int?
     //accesses managed object context
     let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     // outlets for images
-    @IBOutlet weak var image1: UIImageView!//stonefly
+   /* @IBOutlet weak var image1: UIImageView!//stonefly
     @IBOutlet weak var image2: UIImageView!//caddisfly
     @IBOutlet weak var image3: UIImageView!//beetle larvae
     @IBOutlet weak var image4: UIImageView!//mayfly
@@ -30,6 +31,7 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate,UI
     @IBOutlet weak var image14: UIImageView!//aquatic sowbug
     @IBOutlet weak var image15: UIImageView!//aquatic worm
     @IBOutlet weak var image16: UIImageView!//midge
+   */
     @IBOutlet weak var image17: UIImageView!//tubifex worm
     // outlets for textviews
     @IBOutlet weak var amount1: UITextField!//stonefly
@@ -231,29 +233,31 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate,UI
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     // uploads images to respective image views code obtained from ios8cookbook safaribooksonline
-    let stoneflypic = UIImage(named: "stonefly") // variable to access picture of stonefly from my computer
-    let caddisflypic = UIImage(named: "caddisfly")
-    let blarvaepic = UIImage(named: "beetlelarvae")
-    let mayflypic = UIImage(named: "mayfly")
-    let waterpennypic = UIImage(named: "waterpenny")
-    let damselflypic = UIImage(named: "damsel fly")
-    let dragonflypic = UIImage(named: " dragon fly")
-    let craneflypic = UIImage(named: "Cranefly")
-    let clampic = UIImage(named: "Fingernail Clam")
-    let snailpic = UIImage(named: "watersnail")
-    let blackflypic = UIImage(named: "black fly")
-    let scudpic = UIImage(named: "Scud")
-    let crayfishpic = UIImage(named: "Crayfish")
-    let sowbugpic = UIImage(named: "Aquatic sowbug")
-    let aquaticwormpic = UIImage(named: "Aquaticworm")
-    let midgepic = UIImage(named: "midge")
-   let tubifexpic = UIImage(named: "tubifexworm")
+    var stoneflypic = UIImage(named: "stonefly") // variable to access picture of stonefly from my computer
+    var image1 = UIImageView(image: stoneflypic)
+    var caddisflypic = UIImage(named: "caddisfly")
+    var image1 = UIImageView(image: caddisflypic)
+    var blarvaepic = UIImage(named: "beetlelarvae")
+    var mayflypic = UIImage(named: "mayfly")
+    var waterpennypic = UIImage(named: "waterpenny")
+    var damselflypic = UIImage(named: "damsel fly")
+    var dragonflypic = UIImage(named: " dragon fly")
+    var craneflypic = UIImage(named: "Cranefly")
+    var clampic = UIImage(named: "Fingernail Clam")
+    var snailpic = UIImage(named: "watersnail")
+    var blackflypic = UIImage(named: "black fly")
+    var scudpic = UIImage(named: "Scud")
+    var crayfishpic = UIImage(named: "Crayfish")
+    var sowbugpic = UIImage(named: "Aquatic sowbug")
+    var aquaticwormpic = UIImage(named: "Aquaticworm")
+    var midgepic = UIImage(named: "midge")
+   var tubifexpic = UIImage(named: "tubifexworm")
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         super.viewDidLoad()
-        image1.image = stoneflypic // image view is populated with stone fly picture
+       /* image1.image = stoneflypic // image view is populated with stone fly picture
         image1.addSubview(image1) // displays stonefly picture on second page
         // view.addSubview was changed to image1.addSubview
         image2.image = caddisflypic
@@ -288,6 +292,7 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate,UI
         image16.addSubview(image16)
         image17.image = tubifexpic
         image17.addSubview(image17)
+        */
         // fetches data
         //accesses application delegate to obtain managed object context
         let appdelegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -310,7 +315,23 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate,UI
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    // restores state of the view controller
+    override func encodeRestorableStateWithCoder(coder: NSCoder) {
+        // saves id for current view with encoder
+        if let MacroorganismID = MacroorganismID {
+            coder.encodeInteger(MacroorganismID, forKey:"MacroorganismID")
+        }
+        //calls super so inherited state functionality will occur
+        super.encodeRestorableStateWithCoder(coder)
+    }
+    // decodes ID and sets it back to view Controller's ID property
+    override func decodeRestorableStateWithCoder(coder: NSCoder) {
+        MacroorganismID = coder.decodeIntegerForKey("MacroorganismID")
+        super.decodeRestorableStateWithCoder(coder)
+    }
+    // completes restoration of view controller and restores view based on decoded ID
+    override func applicationFinishedRestoringState() {
+        guard let MacroorganismID = MacroorganismID else { return }
+    }
 }
 
