@@ -123,16 +123,16 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Stone fly" translatesAutoresizingMaskIntoConstraints="NO" id="XuQ-g5-P9d">
                                 <rect key="frame" x="20" y="38" width="145" height="70"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Rt-pB-6Q2">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Water Penny" translatesAutoresizingMaskIntoConstraints="NO" id="7Rt-pB-6Q2">
                                 <rect key="frame" x="20" y="177" width="145" height="70"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="caddisfly" translatesAutoresizingMaskIntoConstraints="NO" id="8bW-a7-FQE">
                                 <rect key="frame" x="197" y="38" width="145" height="70"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ehZ-2f-OVs">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Beetle Larvae" translatesAutoresizingMaskIntoConstraints="NO" id="ehZ-2f-OVs">
                                 <rect key="frame" x="384" y="38" width="145" height="70"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="24z-V6-Iy8">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Mayfly" translatesAutoresizingMaskIntoConstraints="NO" id="24z-V6-Iy8">
                                 <rect key="frame" x="581" y="38" width="145" height="70"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xET-J3-yBf">
@@ -160,26 +160,23 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h0C-OR-ds3">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Damsel Fly" translatesAutoresizingMaskIntoConstraints="NO" id="h0C-OR-ds3">
                                 <rect key="frame" x="197" y="177" width="145" height="70"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Eby-au-wSg">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Dragon Fly" translatesAutoresizingMaskIntoConstraints="NO" id="Eby-au-wSg">
                                 <rect key="frame" x="384" y="177" width="145" height="70"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HCJ-4P-hmZ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Crane Fly" translatesAutoresizingMaskIntoConstraints="NO" id="HCJ-4P-hmZ">
                                 <rect key="frame" x="581" y="177" width="145" height="70"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kIB-d6-VTn">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Fingernail Clam" translatesAutoresizingMaskIntoConstraints="NO" id="kIB-d6-VTn">
                                 <rect key="frame" x="20" y="300" width="145" height="70"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W1w-3a-Rqu">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Water Snail" translatesAutoresizingMaskIntoConstraints="NO" id="W1w-3a-Rqu">
                                 <rect key="frame" x="197" y="300" width="145" height="70"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nQT-dr-VZv">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Black Fly" translatesAutoresizingMaskIntoConstraints="NO" id="nQT-dr-VZv">
                                 <rect key="frame" x="384" y="300" width="145" height="70"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eLm-1B-bQM">
-                                <rect key="frame" x="581" y="300" width="145" height="70"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r35-P8-aGy">
                                 <rect key="frame" x="20" y="378" width="145" height="30"/>
@@ -191,19 +188,19 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QGG-vW-Rjw">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Crayfish" translatesAutoresizingMaskIntoConstraints="NO" id="QGG-vW-Rjw">
                                 <rect key="frame" x="20" y="444" width="145" height="70"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="paE-WN-yjE">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Aquatic Sowbug" translatesAutoresizingMaskIntoConstraints="NO" id="paE-WN-yjE">
                                 <rect key="frame" x="189" y="444" width="145" height="70"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FLA-NL-zQK">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Aquatic Worm" translatesAutoresizingMaskIntoConstraints="NO" id="FLA-NL-zQK">
                                 <rect key="frame" x="379" y="444" width="145" height="70"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VaO-25-E5m">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Midge" translatesAutoresizingMaskIntoConstraints="NO" id="VaO-25-E5m">
                                 <rect key="frame" x="581" y="444" width="145" height="70"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HYp-Nz-74A">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Tubifex Worm" translatesAutoresizingMaskIntoConstraints="NO" id="HYp-Nz-74A">
                                 <rect key="frame" x="20" y="580" width="145" height="70"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M4a-pM-vrt">
@@ -273,6 +270,9 @@
                                     <action selector="unknown:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="HMg-2h-xD8"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Scud" translatesAutoresizingMaskIntoConstraints="NO" id="eLm-1B-bQM">
+                                <rect key="frame" x="581" y="300" width="145" height="70"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -296,23 +296,6 @@
                         <outlet property="amount7" destination="9a7-YB-CaO" id="0H5-ji-WGE"/>
                         <outlet property="amount8" destination="Wcf-rb-dyE" id="bkJ-AD-92f"/>
                         <outlet property="amount9" destination="r35-P8-aGy" id="7kj-qy-Lk3"/>
-                        <outlet property="image1" destination="XuQ-g5-P9d" id="AeQ-dU-97z"/>
-                        <outlet property="image10" destination="W1w-3a-Rqu" id="A8B-O3-pxB"/>
-                        <outlet property="image11" destination="nQT-dr-VZv" id="HKk-rr-RiA"/>
-                        <outlet property="image12" destination="eLm-1B-bQM" id="xac-jt-1f2"/>
-                        <outlet property="image13" destination="QGG-vW-Rjw" id="jVj-qx-u1M"/>
-                        <outlet property="image14" destination="paE-WN-yjE" id="qc6-oc-TNR"/>
-                        <outlet property="image15" destination="FLA-NL-zQK" id="yw6-Oi-9ZB"/>
-                        <outlet property="image16" destination="VaO-25-E5m" id="Skm-4q-FCz"/>
-                        <outlet property="image17" destination="HYp-Nz-74A" id="HDv-kQ-qel"/>
-                        <outlet property="image2" destination="8bW-a7-FQE" id="PFT-vr-d96"/>
-                        <outlet property="image3" destination="ehZ-2f-OVs" id="WVE-z5-gQI"/>
-                        <outlet property="image4" destination="24z-V6-Iy8" id="Fs5-rz-1hK"/>
-                        <outlet property="image5" destination="7Rt-pB-6Q2" id="Zg5-le-xln"/>
-                        <outlet property="image6" destination="h0C-OR-ds3" id="Zoy-Ah-ZO1"/>
-                        <outlet property="image7" destination="Eby-au-wSg" id="pbk-as-m9g"/>
-                        <outlet property="image8" destination="HCJ-4P-hmZ" id="QxZ-Zf-rGa"/>
-                        <outlet property="image9" destination="kIB-d6-VTn" id="e1P-PH-UR1"/>
                         <outlet property="mysterybug" destination="t6D-en-zgr" id="L9Z-Ha-WaG"/>
                     </connections>
                 </viewController>
@@ -492,25 +475,25 @@
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2du-e6-bTh">
                                 <rect key="frame" x="20" y="135" width="151" height="209"/>
                             </pickerView>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sVv-3V-n6w">
+                            <pickerView tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sVv-3V-n6w">
                                 <rect key="frame" x="216" y="135" width="151" height="209"/>
                             </pickerView>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lwi-yr-jUS">
+                            <pickerView tag="2" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lwi-yr-jUS">
                                 <rect key="frame" x="403" y="135" width="151" height="209"/>
                             </pickerView>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WFm-N1-hvS">
+                            <pickerView tag="3" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WFm-N1-hvS">
                                 <rect key="frame" x="585" y="135" width="151" height="209"/>
                             </pickerView>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ez2-mD-D65">
+                            <pickerView tag="7" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ez2-mD-D65">
                                 <rect key="frame" x="585" y="537" width="151" height="209"/>
                             </pickerView>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yeL-C3-1fD">
+                            <pickerView tag="6" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yeL-C3-1fD">
                                 <rect key="frame" x="403" y="537" width="151" height="209"/>
                             </pickerView>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tas-kL-BQW">
+                            <pickerView tag="5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tas-kL-BQW">
                                 <rect key="frame" x="216" y="537" width="151" height="209"/>
                             </pickerView>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xbi-Gp-bLr">
+                            <pickerView tag="4" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xbi-Gp-bLr">
                                 <rect key="frame" x="20" y="537" width="151" height="209"/>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Saved?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SDI-Hn-cwE">
@@ -525,23 +508,23 @@
                     <tabBarItem key="tabBarItem" title="Page 3" id="hs4-pT-VJs"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
-                        <outlet property="bottompickerlabel" destination="ii9-QK-k9T" id="iZU-Yp-EIs"/>
-                        <outlet property="erosionpickerlabel" destination="VfT-Nx-nQW" id="e2z-7c-PLe"/>
-                        <outlet property="flowlevelpickerlabel" destination="Wd4-PH-Bgx" id="ZAK-kb-0nC"/>
-                        <outlet property="odorpickerlabel" destination="HH9-81-c4X" id="AVW-qf-XuM"/>
-                        <outlet property="picker1" destination="2du-e6-bTh" id="jgI-OD-7ab"/>
-                        <outlet property="picker2" destination="sVv-3V-n6w" id="J5K-Ng-fNF"/>
-                        <outlet property="picker3" destination="Lwi-yr-jUS" id="ENo-0D-w54"/>
-                        <outlet property="picker4" destination="WFm-N1-hvS" id="wPe-S4-P1Q"/>
-                        <outlet property="picker5" destination="Xbi-Gp-bLr" id="BA3-Pp-Ebr"/>
-                        <outlet property="picker6" destination="tas-kL-BQW" id="fpM-Zb-RNN"/>
-                        <outlet property="picker7" destination="yeL-C3-1fD" id="wJF-iD-BQi"/>
-                        <outlet property="picker8" destination="Ez2-mD-D65" id="n4R-59-WIX"/>
-                        <outlet property="status3" destination="Yge-Nu-6E1" id="FrU-lI-NQb"/>
-                        <outlet property="streamcoverpickerlabel" destination="bZh-3k-V3P" id="T3k-kA-T4R"/>
-                        <outlet property="varietypickerlabel" destination="SDI-Hn-cwE" id="77d-i3-8cR"/>
-                        <outlet property="vegetationpickerlabel" destination="N0p-BH-sA1" id="P6I-Fj-QOX"/>
-                        <outlet property="waterpickerlabel" destination="LQ9-JU-YIl" id="NDT-E4-0ZI"/>
+                        <outlet property="bottompickerlabel" destination="HH9-81-c4X" id="YIu-Yw-KhS"/>
+                        <outlet property="erosionpickerlabel" destination="LQ9-JU-YIl" id="mQS-ht-oAf"/>
+                        <outlet property="flowlevelpickerlabel" destination="ii9-QK-k9T" id="0Mx-SK-Ovr"/>
+                        <outlet property="odorpickerlabel" destination="bZh-3k-V3P" id="e6M-5g-VAK"/>
+                        <outlet property="picker1" destination="2du-e6-bTh" id="jTV-Ma-ckX"/>
+                        <outlet property="picker2" destination="sVv-3V-n6w" id="GZX-H2-9de"/>
+                        <outlet property="picker3" destination="Lwi-yr-jUS" id="ngt-gn-YRS"/>
+                        <outlet property="picker4" destination="WFm-N1-hvS" id="YiT-Lh-n14"/>
+                        <outlet property="picker5" destination="Xbi-Gp-bLr" id="Mvs-JN-8zn"/>
+                        <outlet property="picker6" destination="tas-kL-BQW" id="gfH-g4-UXw"/>
+                        <outlet property="picker7" destination="yeL-C3-1fD" id="j7C-9e-FIg"/>
+                        <outlet property="picker8" destination="Ez2-mD-D65" id="O08-fa-SKI"/>
+                        <outlet property="status3" destination="SDI-Hn-cwE" id="alI-Xw-akj"/>
+                        <outlet property="streamcoverpickerlabel" destination="N0p-BH-sA1" id="25b-ID-0Zu"/>
+                        <outlet property="varietypickerlabel" destination="Wd4-PH-Bgx" id="q41-uX-QDi"/>
+                        <outlet property="vegetationpickerlabel" destination="VfT-Nx-nQW" id="T7u-3m-Vhg"/>
+                        <outlet property="waterpickerlabel" destination="Yge-Nu-6E1" id="gyj-yu-TaM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bkn-tg-ArP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -550,7 +533,22 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Aquatic Sowbug" width="240" height="180"/>
+        <image name="Aquatic Worm" width="150" height="112"/>
+        <image name="Beetle Larvae" width="883" height="568"/>
+        <image name="Black Fly" width="302" height="187"/>
+        <image name="Crane Fly" width="125" height="152"/>
+        <image name="Crayfish" width="320" height="240"/>
+        <image name="Damsel Fly" width="1500" height="1100"/>
+        <image name="Dragon Fly" width="400" height="317"/>
+        <image name="Fingernail Clam" width="123" height="102"/>
+        <image name="Mayfly" width="1017" height="489"/>
+        <image name="Midge" width="408" height="273"/>
+        <image name="Scud" width="150" height="100"/>
         <image name="Stone fly" width="408" height="275"/>
+        <image name="Tubifex Worm" width="137" height="91"/>
+        <image name="Water Penny" width="110" height="73"/>
+        <image name="Water Snail" width="320" height="241"/>
         <image name="caddisfly" width="275" height="164"/>
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>

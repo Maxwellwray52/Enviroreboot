@@ -97,20 +97,28 @@ class Page3ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         // configures pickerview delegate and datasource
         self.picker1.delegate = self //self.picker1 references picker1
         self.picker1.dataSource = self
+        picker1.tag = 0; // assigns tag to distinguish between pickers programatically
         self.picker2.delegate = self
         self.picker2.dataSource = self
+        picker2.tag = 1;
         self.picker3.delegate = self
         self.picker3.dataSource = self
+        picker3.tag = 2;
         self.picker4.delegate = self
         self.picker4.dataSource = self
+        picker4.tag = 3;
         self.picker5.delegate = self
         self.picker5.dataSource = self
+        picker5.tag = 4;
         self.picker6.delegate = self
         self.picker6.dataSource = self
+        picker6.tag = 5;
         self.picker7.delegate = self
         self.picker7.dataSource = self
+        picker7.tag = 6;
         self.picker8.delegate = self
         self.picker8.dataSource = self
+        picker8.tag = 7;
         // inputs data into arrays
         picker1data = ["Clear", "Green", "Muddy", "Black/Oily"]
         picker2data = ["None", "Small Soil Exposure", "Large soil and root Exposure","Full Exposure"]
@@ -144,6 +152,8 @@ class Page3ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
+   if (picker1.tag == 0) {
     // amount of columns of data for pickerview 1
     func numberOfComponentsInPickerView(picker1: UIPickerView) -> Int {
         return 1
@@ -176,6 +186,8 @@ class Page3ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             picker1selection = 0.0;
         }
     }
+}
+    if (picker2.tag == 1) {
     // amount of columns of data for pickerview 2
     func numberOfComponentsInPickerView2(picker2: UIPickerView) -> Int {
         return 1
@@ -205,6 +217,8 @@ class Page3ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             picker2selection = 0.0;
         }
     }
+}
+    if (picker3.tag == 2) {
     // amount of columns of data for pickerview 3
     func numberOfComponentsInPickerView3(picker1: UIPickerView) -> Int {
         return 1
@@ -234,6 +248,8 @@ class Page3ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             picker3selection = 0.0;
         }
     }
+}
+    if(picker4.tag==3) {
     // amount of columns of data for pickerview 4
     func numberOfComponentsInPickerView4(picker4: UIPickerView) -> Int {
         return 1
@@ -263,6 +279,8 @@ class Page3ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             picker4selection = 0.0;
         }
     }
+}
+    if(picker5.tag ==4) {
     // amount of columns of data for pickerview 5
     func numberOfComponentsInPickerView5(picker5: UIPickerView) -> Int {
         return 1
@@ -292,6 +310,8 @@ class Page3ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             picker5selection = 0.0;
         }
     }
+}
+    if(picker6.tag ==5) {
     // amount of columns of data for pickerview 6
     func numberOfComponentsInPickerView6(picker6: UIPickerView) -> Int {
         return 1
@@ -321,6 +341,8 @@ class Page3ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             picker6selection = 0.0;
         }
     }
+}
+    if(picker7.tag ==6) {
     // amount of columns of data for pickerview 7
     func numberOfComponentsInPickerView7(picker7: UIPickerView) -> Int {
         return 1
@@ -350,6 +372,8 @@ class Page3ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             picker7selection = 0.0;
         }
     }
+}
+    if(picker8.tag==7) {
     // amount of columns of data for pickerview 8
     func numberOfComponentsInPickerView8(picker8: UIPickerView) -> Int {
         return 1
@@ -386,6 +410,7 @@ class Page3ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             healthindex = (selection1 + selection2 + selection3)/8
         }
     }
+}
         // restores state of the view controller
         override func encodeRestorableStateWithCoder(coder: NSCoder) {
             // saves id for current view with encoder

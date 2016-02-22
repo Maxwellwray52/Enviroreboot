@@ -233,7 +233,7 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate,UI
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     // uploads images to respective image views code obtained from ios8cookbook safaribooksonline
-    var stoneflypic = UIImage(named: "stonefly") // variable to access picture of stonefly from my computer
+  /* var stoneflypic = UIImage(named: "stonefly") // variable to access picture of stonefly from my computer
     var image1 = UIImageView(image: stoneflypic)
     var caddisflypic = UIImage(named: "caddisfly")
     var image1 = UIImageView(image: caddisflypic)
@@ -252,7 +252,7 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate,UI
     var aquaticwormpic = UIImage(named: "Aquaticworm")
     var midgepic = UIImage(named: "midge")
    var tubifexpic = UIImage(named: "tubifexworm")
-    
+   */
     
     override func viewDidLoad() {
         super.viewDidLoad()
