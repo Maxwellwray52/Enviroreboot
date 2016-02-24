@@ -97,7 +97,7 @@ class Page3ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         // configures pickerview delegate and datasource
         self.picker1.delegate = self //self.picker1 references picker1
         self.picker1.dataSource = self
-        picker1.tag = 0; // assigns tag to distinguish between pickers programatically
+        picker1.tag = 1; // assigns tag to distinguish between pickers programatically
         self.picker2.delegate = self
         self.picker2.dataSource = self
         picker2.tag = 1;
@@ -153,25 +153,68 @@ class Page3ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         // Dispose of any resources that can be recreated.
     }
 
-   if (picker1.tag == 0) {
-    // amount of columns of data for pickerview 1
-    func numberOfComponentsInPickerView(picker1: UIPickerView) -> Int {
+  // if (picker1.tag == 0) {
+    // amount of columns of data for  all pickerviews
+    func numberOfComponentsInPickerView(pickerview: UIPickerView) -> Int {
         return 1
     }
     // amount of rows in pickerview1
-    func pickerView(picker1: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    func pickerView(pickerview: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        if (picker1.tag == 1){
         return picker1data.count //i used picker1 instead of reccomended pickerview in code
+        }
+        else if (picker2.tag == 1){
+            return picker2data.count
+        }
+        else if (picker3.tag == 2){
+            return picker3data.count
+        }
+        else if (picker4.tag == 3){
+            return picker4data.count
+        }
+        else if (picker5.tag == 4){
+            return picker5data.count
+        }
+        else if (picker6.tag == 0){
+            return picker6data.count
+        }
+        else if (picker7.tag == 0){
+            return picker7data.count
+        }
+            return picker8data.count //returns picker8 if previous if statements are false as this function needs to return ints
     }
     // returns data for the row and column thats accessed for picker1
-    func pickerView(picker1: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return picker1data[row] // i used picker1 instead of reccomended pickerview in code
+    func pickerView(pickerview: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if (picker1.tag == 1){
+            return picker1data[row] // i used picker1 instead of reccomended pickerview in code
+        }
+       else if (picker2.tag == 1){
+            return picker2data[row] // i used picker1 instead of reccomended pickerview in code
+        }
+    else if (picker3.tag == 2){
+            return picker3data[row] // i used picker1 instead of reccomended pickerview in code
+        }
+        else if (picker4.tag == 3){
+            return picker4data[row] // i used picker1 instead of reccomended pickerview in code
+        }
+        else if (picker5.tag == 4){
+            return picker5data[row] // i used picker1 instead of reccomended pickerview in code
+        }
+        else if (picker6.tag == 5){
+            return picker6data[row] // i used picker1 instead of reccomended pickerview in code
+        }
+        else if (picker7.tag == 6){
+            return picker1data[row] // i used picker1 instead of reccomended pickerview in code
+        }
+        return picker8data[row] // returns a string to satisfy the function
     }
     // detects the current selection for the first picker view
-    func pickerView(picker1: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    func pickerView(pickerview: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         // triggered whenever the selection is changed
         // row and component represent whats detected
         // displays picker data to label so it can be saved
-        waterpickerlabel.text = "Water Color \(picker1data[row]) "
+    if(picker1.tag == 1) {
+      //  waterpickerlabel.text = "Water Color \(picker1data[row]) "
         // assigns option to a numerical value
         if (row == 0) {
             picker1selection = 4.0;
@@ -186,8 +229,123 @@ class Page3ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             picker1selection = 0.0;
         }
     }
-}
-    if (picker2.tag == 1) {
+        else if(picker2.tag == 1) {
+          // erosionpickerlabel.text = "Bank Erosion\(picker2data[row]) "
+            // assigns option to a numerical value
+            if (row == 0) {
+                picker1selection = 4.0;
+            }
+            if (row==1) {
+                picker1selection = 3.0;
+            }
+            if (row==2) {
+                picker1selection = 2.0;
+            }
+            if (row == 3) {
+                picker1selection = 0.0;
+            }
+        }
+        else if(picker3.tag == 2) {
+          //  vegetationpickerlabel.text = "Bank Vegetation \(picker3data[row]) "
+            // assigns option to a numerical value
+            if (row == 0) {
+                picker1selection = 4.0;
+            }
+            if (row==1) {
+                picker1selection = 3.0;
+            }
+            if (row==2) {
+                picker1selection = 2.0;
+            }
+            if (row == 3) {
+                picker1selection = 0.0;
+            }
+        }
+       else if(picker4.tag == 3) {
+           // streamcoverpickerlabel.text = "Stream Cover \(picker4data[row]) "
+            // assigns option to a numerical value
+            if (row == 0) {
+                picker1selection = 4.0;
+            }
+            if (row==1) {
+                picker1selection = 3.0;
+            }
+            if (row==2) {
+                picker1selection = 2.0;
+            }
+            if (row == 3) {
+                picker1selection = 0.0;
+            }
+        }
+
+        else if(picker5.tag == 4) {
+           // odorpickerlabel.text = "Water odor \(picker5data[row]) "
+            // assigns option to a numerical value
+            if (row == 0) {
+                picker1selection = 4.0;
+            }
+            if (row==1) {
+                picker1selection = 3.0;
+            }
+            if (row==2) {
+                picker1selection = 2.0;
+            }
+            if (row == 3) {
+                picker1selection = 0.0;
+            }
+        }
+        else if(picker6.tag == 5) {
+           // bottompickerlabel.text = "Stream Bottom \(picker6data[row]) "
+            // assigns option to a numerical value
+            if (row == 0) {
+                picker1selection = 4.0;
+            }
+            if (row==1) {
+                picker1selection = 3.0;
+            }
+            if (row==2) {
+                picker1selection = 2.0;
+            }
+            if (row == 3) {
+                picker1selection = 0.0;
+            }
+        }
+       else if(picker7.tag == 6) {
+           // flowlevelpickerlabel.text = "Flow Level \(picker7data[row]) "
+            // assigns option to a numerical value
+            if (row == 0) {
+                picker1selection = 4.0;
+            }
+            if (row==1) {
+                picker1selection = 3.0;
+            }
+            if (row==2) {
+                picker1selection = 2.0;
+            }
+            if (row == 3) {
+                picker1selection = 0.0;
+            }
+        }
+    else { //(picker8.tag == 7)
+           // varietypickerlabel.text = "Habitat Variety \(picker8data[row]) "
+            // assigns option to a numerical value
+            if (row == 0) {
+                picker1selection = 4.0;
+            }
+            if (row==1) {
+                picker1selection = 3.0;
+            }
+            if (row==2) {
+                picker1selection = 2.0;
+            }
+            if (row == 3) {
+                picker1selection = 0.0;
+            }
+        }
+    }
+    /*
+//}
+   // if (picker2.tag == 1) {
     // amount of columns of data for pickerview 2
     func numberOfComponentsInPickerView2(picker2: UIPickerView) -> Int {
         return 1
@@ -204,6 +362,7 @@ class Page3ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     func pickerView2(picker2: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         erosionpickerlabel.text = "Bank Erosion \(picker2data[row])"
         // assigns option to a numerical value
+     if (picker2.tag == 1) {
         if (row == 0) {
             picker2selection = 4.0;
         }
@@ -217,8 +376,9 @@ class Page3ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             picker2selection = 0.0;
         }
     }
-}
-    if (picker3.tag == 2) {
+    }
+//}
+   // if (picker3.tag == 2) {
     // amount of columns of data for pickerview 3
     func numberOfComponentsInPickerView3(picker1: UIPickerView) -> Int {
         return 1
@@ -235,6 +395,7 @@ class Page3ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     func pickerView3(picker3: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         vegetationpickerlabel.text = "Bank Vegetation \(picker3data[row])"
         // assigns option to a numerical value
+     if (picker3.tag == 2) {
         if (row == 0) {
             picker3selection = 4.0;
         }
@@ -248,8 +409,9 @@ class Page3ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             picker3selection = 0.0;
         }
     }
-}
-    if(picker4.tag==3) {
+    }
+//}
+  //  if(picker4.tag==3) {
     // amount of columns of data for pickerview 4
     func numberOfComponentsInPickerView4(picker4: UIPickerView) -> Int {
         return 1
@@ -266,6 +428,7 @@ class Page3ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     func pickerView4(picker4: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         streamcoverpickerlabel.text = "Stream cover \(picker4data[row])"
         // assigns option to a numerical value
+     if(picker4.tag==3) {
         if (row == 0) {
             picker4selection = 4.0;
         }
@@ -279,8 +442,9 @@ class Page3ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             picker4selection = 0.0;
         }
     }
-}
-    if(picker5.tag ==4) {
+    }
+//}
+   // if(picker5.tag ==4) {
     // amount of columns of data for pickerview 5
     func numberOfComponentsInPickerView5(picker5: UIPickerView) -> Int {
         return 1
@@ -297,6 +461,7 @@ class Page3ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     func pickerView5(picker5: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         odorpickerlabel.text = "Water odor \(picker5data[row])"
         // assigns option to a numerical value
+    if(picker5.tag == 4) {
         if (row == 0) {
             picker5selection = 4.0;
         }
@@ -310,8 +475,9 @@ class Page3ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             picker5selection = 0.0;
         }
     }
-}
-    if(picker6.tag ==5) {
+    }
+//}
+   // if(picker6.tag == 5) {
     // amount of columns of data for pickerview 6
     func numberOfComponentsInPickerView6(picker6: UIPickerView) -> Int {
         return 1
@@ -328,6 +494,7 @@ class Page3ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     func pickerView6(picker6: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         bottompickerlabel.text = "Stream bottom \(picker6data[row])"
         // assigns option to a numerical value
+     if(picker6.tag == 5) {
         if (row == 0) {
             picker6selection = 4.0;
         }
@@ -341,8 +508,9 @@ class Page3ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             picker6selection = 0.0;
         }
     }
-}
-    if(picker7.tag ==6) {
+    }
+//}
+   // if(picker7.tag == 6) {
     // amount of columns of data for pickerview 7
     func numberOfComponentsInPickerView7(picker7: UIPickerView) -> Int {
         return 1
@@ -359,6 +527,7 @@ class Page3ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     func pickerView7(picker7: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         flowlevelpickerlabel.text = "Flow level \(picker7data[row])"
         // assigns option to a numerical value
+     if(picker7.tag == 6) {
         if (row == 0) {
             picker7selection = 4.0;
         }
@@ -372,8 +541,10 @@ class Page3ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             picker7selection = 0.0;
         }
     }
-}
-    if(picker8.tag==7) {
+    
+    }
+//}
+    //if(picker8.tag== 7) {
     // amount of columns of data for pickerview 8
     func numberOfComponentsInPickerView8(picker8: UIPickerView) -> Int {
         return 1
@@ -390,6 +561,7 @@ class Page3ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     func pickerView8(picker8: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         varietypickerlabel.text = "Habitat variety \(picker8data[row])"
         // assigns option to a numerical value
+    if(picker8.tag == 7) {
         if (row == 0) {
             picker8selection = 4.0;
         }
@@ -402,6 +574,8 @@ class Page3ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         if (row == 3) {
             picker8selection = 0.0;
         }
+    }
+*/
         func calculatehealthindex (picker1selection:Double, picker2selection:Double, picker3selection:Double, picker4selection:Double, picker5selection:Double, picker6selection:Double, picker7selection:Double, picker8selection: Double, var healthindex:Double, selection1: Double, selection2: Double, selection3: Double) {
             // intermediate variables
             let selection1 = picker1selection + picker2selection + picker3selection
@@ -409,8 +583,8 @@ class Page3ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             let selection3 = picker7selection + picker8selection
             healthindex = (selection1 + selection2 + selection3)/8
         }
-    }
-}
+    //}
+//}
         // restores state of the view controller
         override func encodeRestorableStateWithCoder(coder: NSCoder) {
             // saves id for current view with encoder
