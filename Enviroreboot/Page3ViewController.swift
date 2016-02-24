@@ -95,29 +95,29 @@ class Page3ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         // configures pickerview delegate and datasource
-        self.picker1.delegate = self //self.picker1 references picker1
-        self.picker1.dataSource = self
+        picker1.delegate = self //self.picker1 references picker1 i took out self
+        picker1.dataSource = self
         picker1.tag = 1; // assigns tag to distinguish between pickers programatically
-        self.picker2.delegate = self
-        self.picker2.dataSource = self
+        picker2.delegate = self
+        picker2.dataSource = self
         picker2.tag = 1;
-        self.picker3.delegate = self
-        self.picker3.dataSource = self
+        picker3.delegate = self
+        picker3.dataSource = self
         picker3.tag = 2;
-        self.picker4.delegate = self
-        self.picker4.dataSource = self
+        picker4.delegate = self
+        picker4.dataSource = self
         picker4.tag = 3;
-        self.picker5.delegate = self
-        self.picker5.dataSource = self
+        picker5.delegate = self
+        picker5.dataSource = self
         picker5.tag = 4;
-        self.picker6.delegate = self
-        self.picker6.dataSource = self
+        picker6.delegate = self
+        picker6.dataSource = self
         picker6.tag = 5;
-        self.picker7.delegate = self
-        self.picker7.dataSource = self
+        picker7.delegate = self
+        picker7.dataSource = self
         picker7.tag = 6;
-        self.picker8.delegate = self
-        self.picker8.dataSource = self
+        picker8.delegate = self
+        picker8.dataSource = self
         picker8.tag = 7;
         // inputs data into arrays
         picker1data = ["Clear", "Green", "Muddy", "Black/Oily"]
