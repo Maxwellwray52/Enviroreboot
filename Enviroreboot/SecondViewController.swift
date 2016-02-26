@@ -9,7 +9,52 @@
 import UIKit
 import CoreData
 import MobileCoreServices
-class SecondViewController: UIViewController, UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+class SecondViewController: UIViewController, UIImagePickerControllerDelegate,UINavigationControllerDelegate, UITextFieldDelegate, UITextInputTraits {
+    //
+    @IBOutlet weak var amount1: UILabel!
+    @IBOutlet weak var step1: UIStepper!
+    @IBOutlet weak var step2: UIStepper!
+    @IBOutlet weak var amount2: UILabel!
+    @IBOutlet weak var step3: UIStepper!
+    @IBOutlet weak var amount3: UILabel!
+    @IBOutlet weak var step4: UIStepper!
+    @IBOutlet weak var amount4: UILabel!
+    @IBOutlet weak var step5: UIStepper!
+    @IBOutlet weak var amount5: UILabel!
+    @IBOutlet weak var step6: UIStepper!
+    @IBOutlet weak var amount6: UILabel!
+    @IBOutlet weak var step7: UIStepper!
+    @IBOutlet weak var amount7: UILabel!
+    @IBOutlet weak var step8: UIStepper!
+    @IBOutlet weak var amount8: UILabel!
+    @IBOutlet weak var step9: UIStepper!
+    @IBOutlet weak var amount9: UILabel!
+    @IBOutlet weak var step10: UIStepper!
+    @IBOutlet weak var amount10: UILabel!
+    @IBOutlet weak var step11: UIStepper!
+    @IBOutlet weak var amount11: UILabel!
+    @IBOutlet weak var step12: UIStepper!
+    @IBOutlet weak var amount12: UILabel!
+    @IBOutlet weak var step13: UIStepper!
+    @IBOutlet weak var amount13: UILabel!
+    @IBOutlet weak var step14: UIStepper!
+    @IBOutlet weak var amount14: UILabel!
+    @IBOutlet weak var step15: UIStepper!
+    @IBOutlet weak var amount15: UILabel!
+    @IBOutlet weak var step16: UIStepper!
+    @IBOutlet weak var amount16: UILabel!
+    @IBOutlet weak var step17: UIStepper!
+    @IBOutlet weak var amount17: UILabel!
+    
+    // keyboard type 
+ /*var keyboardType: UIKeyboardType {
+    get {
+        return amount1.keyboardType
+    }
+    set {
+     self.keyboardType = UIKeyboardType.NumberPad
+    }
+    } */
 // Key ID for this page
     var MacroorganismID: Int?
     //accesses managed object context
@@ -34,7 +79,7 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate,UI
    */
     @IBOutlet weak var image17: UIImageView!//tubifex worm
     // outlets for textviews
-    @IBOutlet weak var amount1: UITextField!//stonefly
+  /* @IBOutlet weak var amount1: UITextField!//stonefly
     @IBOutlet weak var amount2: UITextField!//caddisfly
     @IBOutlet weak var amount3: UITextField!//beetle larvae
     @IBOutlet weak var amount4: UITextField!//mayfly
@@ -50,7 +95,7 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate,UI
     @IBOutlet weak var amount14: UITextField!//aquatic sowbug
     @IBOutlet weak var amount15: UITextField!//aquatic worm
     @IBOutlet weak var amount16: UITextField!//midge
-    @IBOutlet weak var amount17: UITextField!//tubifex worm
+   */ //@IBOutlet weak var amount17: UITextField!//tubifex worm
     // outlet for save label
     @IBOutlet weak var saved2: UILabel!
     // variables that convert bug amount text to int
@@ -90,6 +135,62 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate,UI
     @IBOutlet weak var mysterybug: UIImageView!
     // determines if images are new or old
     var newMedia: Bool?
+    // updates labels 
+    @IBAction func step1value(sender: AnyObject) {
+        amount1.text = "Amount : \(Int(step1.value).description)"
+    }
+    @IBAction func step2value(sender: AnyObject) {
+         amount2.text = "Amount : \(Int(step2.value).description)"
+    }
+    @IBAction func step3value(sender: AnyObject) {
+         amount3.text = "Amount : \(Int(step3.value).description)"
+    }
+    @IBAction func step4value(sender: AnyObject) {
+         amount4.text = "Amount : \(Int(step4.value).description)"
+    }
+    @IBAction func step5value(sender: AnyObject) {
+         amount5.text = "Amount : \(Int(step5.value).description)"
+    }
+    @IBAction func step6value(sender: AnyObject) {
+         amount6.text = "Amount : \(Int(step6.value).description)"
+    }
+    @IBAction func step7value(sender: AnyObject) {
+         amount7.text = "Amount : \(Int(step7.value).description)"
+    }
+    @IBAction func step8value(sender: AnyObject) {
+         amount8.text = "Amount : \(Int(step8.value).description)"
+    }
+    @IBAction func step9value(sender: AnyObject) {
+         amount9.text = "Amount : \(Int(step9.value).description)"
+    }
+    @IBAction func step10value(sender: AnyObject) {
+         amount10.text = "Amount : \(Int(step10.value).description)"
+    }
+    @IBAction func step11value(sender: AnyObject) {
+         amount11.text = "Amount : \(Int(step11.value).description)"
+    }
+    @IBAction func step12value(sender: AnyObject) {
+         amount12.text = "Amount : \(Int(step12.value).description)"
+    }
+    @IBAction func step13value(sender: AnyObject) {
+         amount13.text = "Amount : \(Int(step13.value).description)"
+    }
+    @IBAction func step14value(sender: AnyObject) {
+         amount14.text = "Amount : \(Int(step14.value).description)"
+    }
+    @IBAction func step15value(sender: AnyObject) {
+         amount15.text = "Amount : \(Int(step15.value).description)"
+    }
+    @IBAction func step16value(sender: AnyObject) {
+         amount16.text = "Amount : \(Int(step16.value).description)"
+    }
+    @IBAction func step17value(sender: AnyObject) {
+         amount17.text = "Amount : \(Int(step17.value).description)"
+    }
+   
+ 
+    
+    
     
     // action for saved entries button
     @IBAction func savedtwo(sender: AnyObject) {
@@ -257,6 +358,26 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate,UI
     override func viewDidLoad() {
         super.viewDidLoad()
         super.viewDidLoad()
+       /* amount1.delegate = self
+       amount1.keyboardType = UIKeyboardType .NumberPad ;
+        amount2.delegate = self
+        amount3.delegate = self
+        amount4.delegate = self
+        amount5.delegate = self
+        amount6.delegate = self
+        amount7.delegate = self
+        amount8.delegate = self
+        amount9.delegate = self
+        amount10.delegate = self
+        amount11.delegate = self
+        amount12.delegate = self
+        amount13.delegate = self
+        amount14.delegate = self
+        amount15.delegate = self
+        amount16.delegate = self
+        amount17.delegate = self
+*/
+
        /* image1.image = stoneflypic // image view is populated with stone fly picture
         image1.addSubview(image1) // displays stonefly picture on second page
         // view.addSubview was changed to image1.addSubview
