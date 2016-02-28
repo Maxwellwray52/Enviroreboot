@@ -432,7 +432,6 @@
                         <outlet property="step6" destination="4e9-7d-5pO" id="gNa-ve-yzL"/>
                         <outlet property="step7" destination="SVh-pb-zAj" id="DNz-eG-goQ"/>
                         <outlet property="step8" destination="LEl-GD-LpN" id="fog-Nl-ZQL"/>
-                        <outlet property="step8value" destination="SVh-pb-zAj" id="s9V-45-v1I"/>
                         <outlet property="step9" destination="bmK-fs-oKN" id="vv8-WU-s5K"/>
                     </connections>
                 </viewController>

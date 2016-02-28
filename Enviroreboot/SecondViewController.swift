@@ -77,7 +77,7 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate,UI
     @IBOutlet weak var image15: UIImageView!//aquatic worm
     @IBOutlet weak var image16: UIImageView!//midge
    */
-    @IBOutlet weak var image17: UIImageView!//tubifex worm
+ //   @IBOutlet weak var image17: UIImageView!//tubifex worm
     // outlets for textviews
   /* @IBOutlet weak var amount1: UITextField!//stonefly
     @IBOutlet weak var amount2: UITextField!//caddisfly
@@ -137,55 +137,55 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate,UI
     var newMedia: Bool?
     // updates labels 
     @IBAction func step1value(sender: AnyObject) {
-        amount1.text = "Amount : \(Int(step1.value).description)"
+        amount1.text = " \(Int(step1.value).description)"
     }
     @IBAction func step2value(sender: AnyObject) {
-         amount2.text = "Amount : \(Int(step2.value).description)"
+         amount2.text = " \(Int(step2.value).description)"
     }
     @IBAction func step3value(sender: AnyObject) {
-         amount3.text = "Amount : \(Int(step3.value).description)"
+         amount3.text = " \(Int(step3.value).description)"
     }
     @IBAction func step4value(sender: AnyObject) {
-         amount4.text = "Amount : \(Int(step4.value).description)"
+         amount4.text = " \(Int(step4.value).description)"
     }
     @IBAction func step5value(sender: AnyObject) {
-         amount5.text = "Amount : \(Int(step5.value).description)"
+         amount5.text = " \(Int(step5.value).description)"
     }
     @IBAction func step6value(sender: AnyObject) {
-         amount6.text = "Amount : \(Int(step6.value).description)"
+         amount6.text = " \(Int(step6.value).description)"
     }
     @IBAction func step7value(sender: AnyObject) {
-         amount7.text = "Amount : \(Int(step7.value).description)"
+         amount7.text = " \(Int(step7.value).description)"
     }
     @IBAction func step8value(sender: AnyObject) {
-         amount8.text = "Amount : \(Int(step8.value).description)"
+         amount8.text = " \(Int(step8.value).description)"
     }
     @IBAction func step9value(sender: AnyObject) {
-         amount9.text = "Amount : \(Int(step9.value).description)"
+         amount9.text = " \(Int(step9.value).description)"
     }
     @IBAction func step10value(sender: AnyObject) {
-         amount10.text = "Amount : \(Int(step10.value).description)"
+         amount10.text = " \(Int(step10.value).description)"
     }
     @IBAction func step11value(sender: AnyObject) {
-         amount11.text = "Amount : \(Int(step11.value).description)"
+         amount11.text = " \(Int(step11.value).description)"
     }
     @IBAction func step12value(sender: AnyObject) {
-         amount12.text = "Amount : \(Int(step12.value).description)"
+         amount12.text = " \(Int(step12.value).description)"
     }
     @IBAction func step13value(sender: AnyObject) {
-         amount13.text = "Amount : \(Int(step13.value).description)"
+         amount13.text = " \(Int(step13.value).description)"
     }
     @IBAction func step14value(sender: AnyObject) {
-         amount14.text = "Amount : \(Int(step14.value).description)"
+         amount14.text = " \(Int(step14.value).description)"
     }
     @IBAction func step15value(sender: AnyObject) {
-         amount15.text = "Amount : \(Int(step15.value).description)"
+         amount15.text = "\(Int(step15.value).description)"
     }
     @IBAction func step16value(sender: AnyObject) {
-         amount16.text = "Amount : \(Int(step16.value).description)"
+         amount16.text = " \(Int(step16.value).description)"
     }
     @IBAction func step17value(sender: AnyObject) {
-         amount17.text = "Amount : \(Int(step17.value).description)"
+         amount17.text = " \(Int(step17.value).description)"
     }
    
  
