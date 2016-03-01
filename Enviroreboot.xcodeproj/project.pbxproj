@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C18D0041C86101100B16D86 /* pg5TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C18D0031C86101000B16D86 /* pg5TableViewController.swift */; };
 		4CAA2E481C6505940010B9F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAA2E471C6505940010B9F5 /* AppDelegate.swift */; };
 		4CAA2E4A1C6505940010B9F5 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAA2E491C6505940010B9F5 /* FirstViewController.swift */; };
 		4CAA2E4C1C6505940010B9F5 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAA2E4B1C6505940010B9F5 /* SecondViewController.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C18D0031C86101000B16D86 /* pg5TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pg5TableViewController.swift; sourceTree = "<group>"; };
 		4CAA2E441C6505940010B9F5 /* Enviroreboot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Enviroreboot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CAA2E471C6505940010B9F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CAA2E491C6505940010B9F5 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				4CAA2E491C6505940010B9F5 /* FirstViewController.swift */,
 				4CAA2E4B1C6505940010B9F5 /* SecondViewController.swift */,
 				4CAA2E4D1C6505940010B9F5 /* Main.storyboard */,
+				4C18D0031C86101000B16D86 /* pg5TableViewController.swift */,
 				4CAA2E5B1C650D1B0010B9F5 /* Page3ViewController.swift */,
 				4CAA2E5D1C650D300010B9F5 /* Page4ViewController.swift */,
 				4CAA2E5F1C650D440010B9F5 /* Page5ViewController.swift */,
@@ -185,6 +188,7 @@
 				4CAA2E631C650DAA0010B9F5 /* Model.xcdatamodeld in Sources */,
 				4CAA2E661C650E3E0010B9F5 /* Bugs+CoreDataProperties.swift in Sources */,
 				4CAA2E6F1C650EDE0010B9F5 /* Habitat.swift in Sources */,
+				4C18D0041C86101100B16D86 /* pg5TableViewController.swift in Sources */,
 				4CAA2E4A1C6505940010B9F5 /* FirstViewController.swift in Sources */,
 				4CAA2E5C1C650D1B0010B9F5 /* Page3ViewController.swift in Sources */,
 				4CAA2E601C650D440010B9F5 /* Page5ViewController.swift in Sources */,

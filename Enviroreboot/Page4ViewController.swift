@@ -11,9 +11,12 @@ import CoreData
 class Page4ViewController: UIViewController {
 // key id for this page
     var resultsID: Int?
+    //outlets
     @IBOutlet weak var displayhealth: UILabel!
     @IBOutlet weak var displaytolerance: UILabel!
-    
+    @IBOutlet weak var saveproject: UILabel!
+    //accesses managed object context
+    let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     // temporary variables to store index values
     var tretrieve: NSNumber = 0.0
     var hretrieve: NSNumber = 0.0
@@ -37,7 +40,17 @@ class Page4ViewController: UIViewController {
     
     // this function saves all of the data from the entire application
     @IBAction func saveall(sender: AnyObject) {
-        
+        do {
+            // saves data
+            try managedObjectContext.save()
+            // alerts user
+            saveproject.text = "Entries have been saved"
+        }
+            // displays error message if entries are not saved
+        catch let error as NSError {
+            saveproject.text = error.localizedFailureReason ; "please try again"
+        }
+
     }
     
     // this function returns all of the elements to their default values
