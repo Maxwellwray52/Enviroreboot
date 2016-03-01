@@ -100,25 +100,25 @@ class Page3ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         picker1.tag = 1; // assigns tag to distinguish between pickers programatically
         picker2.delegate = self
         picker2.dataSource = self
-        picker2.tag = 1;
+        picker2.tag = 2;
         picker3.delegate = self
         picker3.dataSource = self
-        picker3.tag = 2;
+        picker3.tag = 3;
         picker4.delegate = self
         picker4.dataSource = self
-        picker4.tag = 3;
+        picker4.tag = 4;
         picker5.delegate = self
         picker5.dataSource = self
-        picker5.tag = 4;
+        picker5.tag = 5;
         picker6.delegate = self
         picker6.dataSource = self
-        picker6.tag = 5;
+        picker6.tag = 6;
         picker7.delegate = self
         picker7.dataSource = self
-        picker7.tag = 6;
+        picker7.tag = 7;
         picker8.delegate = self
         picker8.dataSource = self
-        picker8.tag = 7;
+        picker8.tag = 8;
         // inputs data into arrays
         picker1data = ["Clear", "Green", "Muddy", "Black/Oily"]
         picker2data = ["None", "Small Soil Exposure", "Large soil and root Exposure","Full Exposure"]
@@ -160,50 +160,50 @@ class Page3ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     }
     // amount of rows in pickerview1
     func pickerView(pickerview: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        if (picker1.tag == 1){
+        if (pickerview.tag == 1){
         return picker1data.count //i used picker1 instead of reccomended pickerview in code
         }
-        else if (picker2.tag == 1){
+        else if (pickerview.tag == 2){
             return picker2data.count
         }
-        else if (picker3.tag == 2){
+        else if (pickerview.tag == 3){
             return picker3data.count
         }
-        else if (picker4.tag == 3){
+        else if (pickerview.tag == 4){
             return picker4data.count
         }
-        else if (picker5.tag == 4){
+        else if (pickerview.tag == 5){
             return picker5data.count
         }
-        else if (picker6.tag == 0){
+        else if (pickerview.tag == 6){
             return picker6data.count
         }
-        else if (picker7.tag == 0){
+        else if (pickerview.tag == 7){
             return picker7data.count
         }
             return picker8data.count //returns picker8 if previous if statements are false as this function needs to return ints
     }
     // returns data for the row and column thats accessed for picker1
     func pickerView(pickerview: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        if (picker1.tag == 1){
+        if (pickerview.tag == 1){
             return picker1data[row] // i used picker1 instead of reccomended pickerview in code
         }
-       else if (picker2.tag == 1){
+       else if (pickerview.tag == 2){
             return picker2data[row] // i used picker1 instead of reccomended pickerview in code
         }
-    else if (picker3.tag == 2){
+    else if (pickerview.tag == 3){
             return picker3data[row] // i used picker1 instead of reccomended pickerview in code
         }
-        else if (picker4.tag == 3){
+        else if (pickerview.tag == 4){
             return picker4data[row] // i used picker1 instead of reccomended pickerview in code
         }
-        else if (picker5.tag == 4){
+        else if (pickerview.tag == 5){
             return picker5data[row] // i used picker1 instead of reccomended pickerview in code
         }
-        else if (picker6.tag == 5){
+        else if (pickerview.tag == 6){
             return picker6data[row] // i used picker1 instead of reccomended pickerview in code
         }
-        else if (picker7.tag == 6){
+        else if (pickerview.tag == 7){
             return picker1data[row] // i used picker1 instead of reccomended pickerview in code
         }
         return picker8data[row] // returns a string to satisfy the function
@@ -213,7 +213,7 @@ class Page3ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         // triggered whenever the selection is changed
         // row and component represent whats detected
         // displays picker data to label so it can be saved
-    if(picker1.tag == 1) {
+    if(pickerview.tag == 1) {
       //  waterpickerlabel.text = "Water Color \(picker1data[row]) "
         // assigns option to a numerical value
         if (row == 0) {
@@ -229,7 +229,7 @@ class Page3ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             picker1selection = 0.0;
         }
     }
-        else if(picker2.tag == 1) {
+        else if(pickerview.tag == 2) {
           // erosionpickerlabel.text = "Bank Erosion\(picker2data[row]) "
             // assigns option to a numerical value
             if (row == 0) {
@@ -245,7 +245,7 @@ class Page3ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
                 picker1selection = 0.0;
             }
         }
-        else if(picker3.tag == 2) {
+        else if(pickerview.tag == 3) {
           //  vegetationpickerlabel.text = "Bank Vegetation \(picker3data[row]) "
             // assigns option to a numerical value
             if (row == 0) {
@@ -261,7 +261,7 @@ class Page3ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
                 picker1selection = 0.0;
             }
         }
-       else if(picker4.tag == 3) {
+       else if(pickerview.tag == 4) {
            // streamcoverpickerlabel.text = "Stream Cover \(picker4data[row]) "
             // assigns option to a numerical value
             if (row == 0) {
@@ -278,7 +278,7 @@ class Page3ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             }
         }
 
-        else if(picker5.tag == 4) {
+        else if(pickerview.tag == 5) {
            // odorpickerlabel.text = "Water odor \(picker5data[row]) "
             // assigns option to a numerical value
             if (row == 0) {
@@ -294,7 +294,7 @@ class Page3ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
                 picker1selection = 0.0;
             }
         }
-        else if(picker6.tag == 5) {
+        else if(pickerview.tag == 6) {
            // bottompickerlabel.text = "Stream Bottom \(picker6data[row]) "
             // assigns option to a numerical value
             if (row == 0) {
@@ -310,7 +310,7 @@ class Page3ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
                 picker1selection = 0.0;
             }
         }
-       else if(picker7.tag == 6) {
+       else if(pickerview.tag == 7) {
            // flowlevelpickerlabel.text = "Flow Level \(picker7data[row]) "
             // assigns option to a numerical value
             if (row == 0) {

@@ -647,27 +647,52 @@
                             </label>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2du-e6-bTh">
                                 <rect key="frame" x="20" y="135" width="151" height="209"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="h0k-rB-JDa" id="Bv0-7s-t9l"/>
+                                    <outlet property="delegate" destination="h0k-rB-JDa" id="JDa-g8-fvV"/>
+                                </connections>
                             </pickerView>
-                            <pickerView tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sVv-3V-n6w">
+                            <pickerView tag="2" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sVv-3V-n6w">
                                 <rect key="frame" x="216" y="135" width="151" height="209"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="h0k-rB-JDa" id="a0a-hR-p38"/>
+                                    <outlet property="delegate" destination="h0k-rB-JDa" id="Hgj-rZ-zQR"/>
+                                </connections>
                             </pickerView>
-                            <pickerView tag="2" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lwi-yr-jUS">
+                            <pickerView tag="3" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lwi-yr-jUS">
                                 <rect key="frame" x="403" y="135" width="151" height="209"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="h0k-rB-JDa" id="ELR-rL-z5X"/>
+                                    <outlet property="delegate" destination="h0k-rB-JDa" id="kMu-KT-slw"/>
+                                </connections>
                             </pickerView>
-                            <pickerView tag="3" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WFm-N1-hvS">
+                            <pickerView tag="4" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WFm-N1-hvS">
                                 <rect key="frame" x="585" y="135" width="151" height="209"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="h0k-rB-JDa" id="ee9-7k-tVQ"/>
+                                    <outlet property="delegate" destination="h0k-rB-JDa" id="dsh-Sd-E5c"/>
+                                </connections>
                             </pickerView>
-                            <pickerView tag="7" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ez2-mD-D65">
-                                <rect key="frame" x="585" y="537" width="151" height="209"/>
-                            </pickerView>
-                            <pickerView tag="6" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yeL-C3-1fD">
+                            <pickerView tag="7" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yeL-C3-1fD">
                                 <rect key="frame" x="403" y="537" width="151" height="209"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="h0k-rB-JDa" id="e9r-zs-evM"/>
+                                    <outlet property="delegate" destination="h0k-rB-JDa" id="f1B-AU-vdY"/>
+                                </connections>
                             </pickerView>
-                            <pickerView tag="5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tas-kL-BQW">
+                            <pickerView tag="6" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tas-kL-BQW">
                                 <rect key="frame" x="216" y="537" width="151" height="209"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="h0k-rB-JDa" id="Hp0-zn-RjE"/>
+                                    <outlet property="delegate" destination="h0k-rB-JDa" id="79i-SN-3FB"/>
+                                </connections>
                             </pickerView>
-                            <pickerView tag="4" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xbi-Gp-bLr">
+                            <pickerView tag="5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xbi-Gp-bLr">
                                 <rect key="frame" x="20" y="537" width="151" height="209"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="h0k-rB-JDa" id="mzn-iz-wcB"/>
+                                    <outlet property="delegate" destination="h0k-rB-JDa" id="JtQ-yW-PdP"/>
+                                </connections>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Saved?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SDI-Hn-cwE">
                                 <rect key="frame" x="489" y="831" width="56" height="21"/>
@@ -675,6 +700,13 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pickerView tag="8" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ez2-mD-D65">
+                                <rect key="frame" x="585" y="544" width="151" height="209"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="h0k-rB-JDa" id="0sF-JM-klS"/>
+                                    <outlet property="delegate" destination="h0k-rB-JDa" id="l8L-2G-9lM"/>
+                                </connections>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
