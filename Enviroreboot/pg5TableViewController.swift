@@ -2,14 +2,16 @@
 //  pg5TableViewController.swift
 //  Enviroreboot
 //
-//  Created by Max Wray on 3/1/16.
+//  Created by Max Wray on 3/3/16.
 //  Copyright © 2016 Max Wray. All rights reserved.
 //
 
 import UIKit
 import CoreData
 class pg5TableViewController: UITableViewController {
-
+    
+    // key ID for this page
+    var recordsID: Int?
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,6 +25,26 @@ class pg5TableViewController: UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+
+    
+    // restores state of the view controller
+    override func encodeRestorableStateWithCoder(coder: NSCoder) {
+        // saves id for current view with encoder
+        if let recordsID = recordsID {
+            coder.encodeInteger(recordsID, forKey:"recordsID")
+        }
+        //calls super so inherited state functionality will occur
+        super.encodeRestorableStateWithCoder(coder)
+    }
+    // decodes ID and sets it back to view Controller's ID property
+    override func decodeRestorableStateWithCoder(coder: NSCoder) {
+        recordsID = coder.decodeIntegerForKey("recordsID")
+        super.decodeRestorableStateWithCoder(coder)
+    }
+    // completes restoration of view controller and restores view based on decoded ID
+    override func applicationFinishedRestoringState() {
+        guard let recordsID = recordsID else { return }
     }
 
     // MARK: - Table view data source

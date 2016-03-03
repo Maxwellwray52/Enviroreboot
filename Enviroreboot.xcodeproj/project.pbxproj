@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C18D0041C86101100B16D86 /* pg5TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C18D0031C86101000B16D86 /* pg5TableViewController.swift */; };
+		4C985C601C88A4BF0019A122 /* pg5TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C985C5F1C88A4BF0019A122 /* pg5TableViewController.swift */; };
+		4C985C621C88B1500019A122 /* displayrecordsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C985C611C88B1500019A122 /* displayrecordsTableViewCell.swift */; };
 		4CAA2E481C6505940010B9F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAA2E471C6505940010B9F5 /* AppDelegate.swift */; };
 		4CAA2E4A1C6505940010B9F5 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAA2E491C6505940010B9F5 /* FirstViewController.swift */; };
 		4CAA2E4C1C6505940010B9F5 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAA2E4B1C6505940010B9F5 /* SecondViewController.swift */; };
@@ -16,7 +17,6 @@
 		4CAA2E541C6505940010B9F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CAA2E521C6505940010B9F5 /* LaunchScreen.storyboard */; };
 		4CAA2E5C1C650D1B0010B9F5 /* Page3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAA2E5B1C650D1B0010B9F5 /* Page3ViewController.swift */; };
 		4CAA2E5E1C650D300010B9F5 /* Page4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAA2E5D1C650D300010B9F5 /* Page4ViewController.swift */; };
-		4CAA2E601C650D440010B9F5 /* Page5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAA2E5F1C650D440010B9F5 /* Page5ViewController.swift */; };
 		4CAA2E631C650DAA0010B9F5 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4CAA2E611C650DAA0010B9F5 /* Model.xcdatamodeld */; };
 		4CAA2E661C650E3E0010B9F5 /* Bugs+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAA2E641C650E3E0010B9F5 /* Bugs+CoreDataProperties.swift */; };
 		4CAA2E671C650E3E0010B9F5 /* Bugs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CAA2E651C650E3E0010B9F5 /* Bugs.swift */; };
@@ -29,7 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4C18D0031C86101000B16D86 /* pg5TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pg5TableViewController.swift; sourceTree = "<group>"; };
+		4C985C5F1C88A4BF0019A122 /* pg5TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pg5TableViewController.swift; sourceTree = "<group>"; };
+		4C985C611C88B1500019A122 /* displayrecordsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = displayrecordsTableViewCell.swift; sourceTree = "<group>"; };
 		4CAA2E441C6505940010B9F5 /* Enviroreboot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Enviroreboot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CAA2E471C6505940010B9F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CAA2E491C6505940010B9F5 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -40,7 +41,6 @@
 		4CAA2E551C6505940010B9F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CAA2E5B1C650D1B0010B9F5 /* Page3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page3ViewController.swift; sourceTree = "<group>"; };
 		4CAA2E5D1C650D300010B9F5 /* Page4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page4ViewController.swift; sourceTree = "<group>"; };
-		4CAA2E5F1C650D440010B9F5 /* Page5ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page5ViewController.swift; sourceTree = "<group>"; };
 		4CAA2E621C650DAA0010B9F5 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		4CAA2E641C650E3E0010B9F5 /* Bugs+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bugs+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		4CAA2E651C650E3E0010B9F5 /* Bugs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bugs.swift; sourceTree = "<group>"; };
@@ -94,10 +94,10 @@
 				4CAA2E491C6505940010B9F5 /* FirstViewController.swift */,
 				4CAA2E4B1C6505940010B9F5 /* SecondViewController.swift */,
 				4CAA2E4D1C6505940010B9F5 /* Main.storyboard */,
-				4C18D0031C86101000B16D86 /* pg5TableViewController.swift */,
+				4C985C611C88B1500019A122 /* displayrecordsTableViewCell.swift */,
+				4C985C5F1C88A4BF0019A122 /* pg5TableViewController.swift */,
 				4CAA2E5B1C650D1B0010B9F5 /* Page3ViewController.swift */,
 				4CAA2E5D1C650D300010B9F5 /* Page4ViewController.swift */,
-				4CAA2E5F1C650D440010B9F5 /* Page5ViewController.swift */,
 				4CAA2E611C650DAA0010B9F5 /* Model.xcdatamodeld */,
 				4CAA2E501C6505940010B9F5 /* Assets.xcassets */,
 				4CAA2E521C6505940010B9F5 /* LaunchScreen.storyboard */,
@@ -183,15 +183,15 @@
 				4CAA2E481C6505940010B9F5 /* AppDelegate.swift in Sources */,
 				4CAA2E6B1C650EC70010B9F5 /* Front.swift in Sources */,
 				4CAA2E5E1C650D300010B9F5 /* Page4ViewController.swift in Sources */,
+				4C985C621C88B1500019A122 /* displayrecordsTableViewCell.swift in Sources */,
 				4CAA2E671C650E3E0010B9F5 /* Bugs.swift in Sources */,
 				4CAA2E731C650F1B0010B9F5 /* Result.swift in Sources */,
 				4CAA2E631C650DAA0010B9F5 /* Model.xcdatamodeld in Sources */,
 				4CAA2E661C650E3E0010B9F5 /* Bugs+CoreDataProperties.swift in Sources */,
 				4CAA2E6F1C650EDE0010B9F5 /* Habitat.swift in Sources */,
-				4C18D0041C86101100B16D86 /* pg5TableViewController.swift in Sources */,
+				4C985C601C88A4BF0019A122 /* pg5TableViewController.swift in Sources */,
 				4CAA2E4A1C6505940010B9F5 /* FirstViewController.swift in Sources */,
 				4CAA2E5C1C650D1B0010B9F5 /* Page3ViewController.swift in Sources */,
-				4CAA2E601C650D440010B9F5 /* Page5ViewController.swift in Sources */,
 				4CAA2E6E1C650EDE0010B9F5 /* Habitat+CoreDataProperties.swift in Sources */,
 				4CAA2E6A1C650EC70010B9F5 /* Front+CoreDataProperties.swift in Sources */,
 			);
