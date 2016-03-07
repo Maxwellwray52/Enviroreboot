@@ -40,6 +40,19 @@ class Page4ViewController: UIViewController {
     
     // this function saves all of the data from the entire application
     @IBAction func saveall(sender: AnyObject) {
+        let entityDescription = NSEntityDescription.entityForName("Habitat", inManagedObjectContext: managedObjectContext)
+
+        let request = NSFetchRequest(entityName:"Habitat")
+         request.entity = entityDescription
+        //fetch request to retrieve data
+        let pred = NSPredicate(format: "(hindex = %@)", hindex.Double!)
+        request.predicate = pred
+
+        // retrieves data in an array
+         var results = managedObjectContext.executeFetchRequest(request,error: &error)
+         let match = results[0] as! NSManagedObject
+          let healthind = match.valueforKey("hindex") as! Double
+         displayhealth.text = "Health index is \(healthind)"
         do {
             // saves data
             try managedObjectContext.save()
