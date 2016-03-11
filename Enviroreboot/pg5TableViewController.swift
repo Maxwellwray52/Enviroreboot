@@ -12,7 +12,31 @@ class pg5TableViewController: UITableViewController {
     
     // key ID for this page
     var recordsID: Int?
+    // managed object context
+    let managedObjectContext = (UIApplication.sharedApplication().delegate
+        as! AppDelegate).managedObjectContext
+    // temporary variables to store retrieved values
+    var place : String = ""
+    var getweather: String = ""
+    var initial: String = ""
+    var start: NSDate
+    var airtemp: Float = 0.0
+    var watertemp: Float = 0.0
+    var tolfunction: Double = 0.0
+    var healthfunction: Double = 0.0
+    // arrays
+    //stores retrieved front variables
+    var frontretrieved[String] = [String]()
+    //bugs variables
+    var bugsretrieved[String] = [String]()
+    //habitat variables
+     var habitatretrieved[String] = [String]()
+
     override func viewDidLoad() {
+    // populates array 
+    frontretrieved = [place, getweather, initial, start]
+    bugsretrieved = [tolfunction]
+    habitatretrieved = [healthfunction]
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
@@ -22,6 +46,61 @@ class pg5TableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
+    @IBAction func getrecords(sender: AnyObject) {
+    // entity description
+    let frontentityDescription = NSEntityDescription.entityForName("Front", inManagedObjectContext: managedObjectContext)
+    let bugsentityDescription = NSEntityDescription.entityForName("Bugs", inManagedObjectContext: managedObjectContext)
+    let habitatentityDescription = NSEntityDescription.entityForName("Habitat", inManagedObjectContext: managedObjectContext)
+       // retrieves front data
+    let frontrequest = NSFetchRequest()
+    frontrequest.entity = frontentityDescription
+    let frontpred = NSPredicate(format: "(location = %@)", Front.location)
+    frontrequest.predicate = frontpred
+    do {
+        var frontresults = try managedObjectContext.executeFetchRequest(frontrequest)
+        if frontresults.count > 0 {
+            let frontmatch = frontresults[0] as! NSManagedObject
+            //stores retrieved data to temporary values
+            place = Front.location
+            getweather = Front.weather
+            initial = Front.additional
+            start = Front.stamp
+        }
+    }
+        // retrieves bugs data
+        let bugsrequest = NSFetchRequest()
+        bugsrequest.entity = bugsentityDescription
+         let bugspred = NSPredicate(format: "(tolerance = %@)", Bugs.tolerance)
+        bugsrequest.predicate = bugspred
+        do {
+            var bugsresults = try managedObjectContext.executeFetchRequest(bugsrequest)
+            if bugsresults.count > 0 {
+            let bugsmatch = bugsresults[0] as! NSManagedObject
+            //stores retrieved data to temporary values
+            tolfunction = Bugs.tolerance
+            }
+        }
+    // retrieves habitat data
+    let habitatrequest = NSFetchRequest()
+    habitatrequest.entity = habitatentityDescription
+    let habitatpred = NSPredicate(format: "(tolerance = %@)", Habitat.hindex)
+    habitatrequest.predicate = habitatpred
+    do {
+        var habitatresults = try managedObjectContext.executeFetchRequest(habitatrequest)
+        if habitatresults.count > 0 {
+        let habitatmatch = habitatresults[0] as! NSManagedObject
+        //stores retrieved data to temporary values
+        healthfunction = Habitat.hindex
+        }
+    }
+}
+    
+    @IBAction func adddata(sender: AnyObject) {
+    }
+    
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -50,13 +129,12 @@ class pg5TableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        
+        return frontretrieved.count + bugsretrieved.count + habitatretrieved.count
     }
 
     /*

@@ -495,7 +495,18 @@
                             <outlet property="delegate" destination="RD1-tb-ihX" id="b8Z-DQ-1jZ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Ih9-gu-4iv"/>
+                    <navigationItem key="navigationItem" id="Ih9-gu-4iv">
+                        <barButtonItem key="leftBarButtonItem" title="getrecords" id="rOL-TV-nrP">
+                            <connections>
+                                <action selector="getrecords:" destination="RD1-tb-ihX" id="4It-Kx-AQs"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="add" id="o6n-Ib-7un">
+                            <connections>
+                                <action selector="adddata:" destination="RD1-tb-ihX" id="uXV-Ye-24c"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a6G-ur-heh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
