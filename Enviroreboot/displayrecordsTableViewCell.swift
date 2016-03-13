@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import RealmSwift
 class displayrecordsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var displayentries: UILabel!

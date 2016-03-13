@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import MobileCoreServices
+import RealmSwift
 class SecondViewController: UIViewController, UIImagePickerControllerDelegate,UINavigationControllerDelegate, UITextFieldDelegate, UITextInputTraits {
     //
     @IBOutlet weak var amount1: UILabel!

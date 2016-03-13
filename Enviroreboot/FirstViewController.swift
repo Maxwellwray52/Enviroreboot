@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import RealmSwift
 class FirstViewController: UIViewController {
     // key value for this page
     var sampleID: Int?
@@ -35,6 +36,22 @@ class FirstViewController: UIViewController {
     // super.viewDidLoad()
     //}
     
+    // stores Front1 object
+    var frontdata: Front1!
+    // saves attributes to front1 object
+    func addFront1() {
+        let realm1 = try! Realm() // creates realm instance
+        try realm1.write { // creates write transition
+          let frontcomponents = Front1() // creates an instance of front 1
+            frontcomponents.location = self.locationTextField.text!
+            frontcomponents.weather = self.weatherTextField.text!
+            frontcomponents.initial = self.Characteristics.text!
+            frontcomponents.atemp = self.temperatureSlider.value
+            frontcomponents.wtemp = self.waterslider.value
+            realm1.add(frontcomponents) // adds frontcomponents to realm
+            self.frontdata = frontcomponents // assigns frontcomponents to frontdata property
+        }
+    }
     @IBAction func totwo(sender: AnyObject) {
         //saves 1st page
         //creates entity description

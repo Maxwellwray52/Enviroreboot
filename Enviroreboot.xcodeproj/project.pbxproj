@@ -30,6 +30,7 @@
 		4CB867181C94DE790084D34E /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4CB867161C94DE790084D34E /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4CB8671B1C94DE840084D34E /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CB8671A1C94DE840084D34E /* RealmSwift.framework */; };
 		4CB8671C1C94DE840084D34E /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4CB8671A1C94DE840084D34E /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4CB8671E1C94EE690084D34E /* Front1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CB8671D1C94EE690084D34E /* Front1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -71,6 +72,7 @@
 		4CAA2E711C650F1B0010B9F5 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		4CB867161C94DE790084D34E /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		4CB8671A1C94DE840084D34E /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		4CB8671D1C94EE690084D34E /* Front1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Front1.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				4C985C5F1C88A4BF0019A122 /* pg5TableViewController.swift */,
 				4CAA2E5B1C650D1B0010B9F5 /* Page3ViewController.swift */,
 				4CAA2E5D1C650D300010B9F5 /* Page4ViewController.swift */,
+				4CB8671D1C94EE690084D34E /* Front1.swift */,
 				4CAA2E611C650DAA0010B9F5 /* Model.xcdatamodeld */,
 				4CAA2E501C6505940010B9F5 /* Assets.xcassets */,
 				4CAA2E521C6505940010B9F5 /* LaunchScreen.storyboard */,
@@ -211,6 +214,7 @@
 				4CAA2E5E1C650D300010B9F5 /* Page4ViewController.swift in Sources */,
 				4C985C621C88B1500019A122 /* displayrecordsTableViewCell.swift in Sources */,
 				4CAA2E671C650E3E0010B9F5 /* Bugs.swift in Sources */,
+				4CB8671E1C94EE690084D34E /* Front1.swift in Sources */,
 				4CAA2E731C650F1B0010B9F5 /* Result.swift in Sources */,
 				4CAA2E631C650DAA0010B9F5 /* Model.xcdatamodeld in Sources */,
 				4CAA2E661C650E3E0010B9F5 /* Bugs+CoreDataProperties.swift in Sources */,
