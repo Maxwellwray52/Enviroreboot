@@ -21,7 +21,6 @@ class Page4ViewController: UIViewController {
     // temporary variables to store index values
     var tretrieve: NSNumber = 0.0
     var hretrieve: NSNumber = 0.0
-    
     //  tretrieve = viewcontroller2ViewController.ViewDidLoad(bugstracker)
     //  hretrieve = page3ViewController.ViewDidLoad(htracker)
     

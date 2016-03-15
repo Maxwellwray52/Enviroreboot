@@ -27,17 +27,26 @@ class pg5TableViewController: UITableViewController {
     var healthfunction: Double = 0.0
     // arrays
     //stores retrieved front variables
-    var frontretrieved[String] = [String]()
+    //var frontretrieved = [NSObject]()
     //bugs variables
-    var bugsretrieved[String] = [String]()
+    //var bugsretrieved = []
     //habitat variables
-     var habitatretrieved[String] = [String]()
+     //var habitatretrieved = []
+    
+    
+    
+    
+    //fetching data
+    let realm = try! Realm()
+     var frontretrieved: Results<Front1> = { self.realm.objects(Front1) } ()
+     var bugsretrieved: Results<bugs1> = {self.realm.objects(bugs1)}()
+     var habitatretrieved: Results<Habitat1> = {self.realm.objects(Habitat1)}()
 
     override func viewDidLoad() {
     // populates array 
-    frontretrieved = [place, getweather, initial, start]
-    bugsretrieved = [tolfunction]
-    habitatretrieved = [healthfunction]
+    //frontretrieved = [place, getweather, initial, start]
+   // bugsretrieved = [tolfunction]
+    //habitatretrieved = [healthfunction]
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
@@ -46,7 +55,7 @@ class pg5TableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
-
+/*
     @IBAction func getrecords(sender: AnyObject) {
     // entity description
     let frontentityDescription = NSEntityDescription.entityForName("Front", inManagedObjectContext: managedObjectContext)
@@ -95,6 +104,7 @@ class pg5TableViewController: UITableViewController {
         }
     }
 }
+   */
     
     @IBAction func adddata(sender: AnyObject) {
     }

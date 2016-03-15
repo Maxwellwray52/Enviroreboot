@@ -127,7 +127,7 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate,UI
     var tolerant1: Int = 0
     var tolerant2: Int = 0
     // variable that stores tolerance value
-    var Tindex: NSNumber = 0
+    var Tindex: Double = 0.0
     // array for tolerance index
     //var ttracker: [Int] = []
     // array that stores data
@@ -191,7 +191,36 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate,UI
    
  
     
-    
+    // stores bugs1 object
+    var bugsdata: bugs1!
+    // saves attributes to bugs object
+    func addbugs1() {
+        let realm2 = try! Realm() // creates realm instance
+        try realm2.write { // creates write transition
+            let bugscomponents = bugs1() // creates an instance of bugs 1
+            bugscomponents.m1 = self.step1.value
+            bugscomponents.m2 = self.step2.value
+            bugscomponents.m3 = self.step3.value
+            bugscomponents.m4 = self.step4.value
+            bugscomponents.m5 = self.step5.value
+            bugscomponents.m6 = self.step6.value
+            bugscomponents.m7 = self.step7.value
+            bugscomponents.m8 = self.step8.value
+            bugscomponents.m9 = self.step9.value
+            bugscomponents.m10 = self.step10.value
+            bugscomponents.m11 = self.step11.value
+            bugscomponents.m12 = self.step12.value
+            bugscomponents.m13 = self.step13.value
+            bugscomponents.m14 = self.step14.value
+            bugscomponents.m15 = self.step15.value
+            bugscomponents.m16 = self.step16.value
+            bugscomponents.m17 = self.step17.value
+           bugscomponents.tolerance = self.Tindex
+            realm2.add(bugscomponents) // adds frontcomponents to realm
+            self.bugsdata = bugscomponents // assigns frontcomponents to frontdata property
+        }
+    }
+
     
     // action for saved entries button
     @IBAction func savedtwo(sender: AnyObject) {

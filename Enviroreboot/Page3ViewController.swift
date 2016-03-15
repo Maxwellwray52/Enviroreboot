@@ -50,7 +50,7 @@ class Page3ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     @IBOutlet weak var flowlevelpickerlabel: UILabel!
     @IBOutlet weak var varietypickerlabel: UILabel!
     // variable that stores health index
-    var healthindex: NSNumber = 0.0
+    var healthindex: Double = 0.0
     var selection1: Double = 0.0
     var selection2: Double = 0.0
     var selection3: Double = 0.0
@@ -148,6 +148,31 @@ class Page3ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
 
         // Do any additional setup after loading the view.
     }
+    
+    // stores habitat1 object
+    var habitatdata: Habitat1!
+    // saves attributes to habitat object
+    func addhabitat1() {
+        let realm3 = try! Realm() // creates realm instance
+        try realm3.write { // creates write transition
+            let habitatcomponents = Habitat1() // creates an instance of habitat 1
+            habitatcomponents.p1 = picker1selection
+            habitatcomponents.p2 = picker2selection
+            habitatcomponents.p3 = picker3selection
+            habitatcomponents.p4 = picker4selection
+            habitatcomponents.p5 = picker5selection
+            habitatcomponents.p6 = picker6selection
+            habitatcomponents.p7 = picker7selection
+            habitatcomponents.p8 = picker8selection
+            habitatcomponents.health = self.healthindex
+            realm3.add(habitatcomponents) // adds frontcomponents to realm
+            self.habitatdata = habitatcomponents // assigns frontcomponents to habitatdata property
+        }
+    }
+
+    
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
