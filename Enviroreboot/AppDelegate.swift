@@ -8,11 +8,13 @@
 
 import UIKit
 import CoreData
+import RealmSwift
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+let realm = try! Realm()
+    
     // preserves and restores state of views 
     func application(application: UIApplication, shouldSaveApplicationState coder: NSCoder) -> Bool {
         return true

@@ -49,6 +49,8 @@ class Page3ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     @IBOutlet weak var bottompickerlabel: UILabel!
     @IBOutlet weak var flowlevelpickerlabel: UILabel!
     @IBOutlet weak var varietypickerlabel: UILabel!
+    @IBOutlet weak var hdisplay: UILabel!
+    
     // variable that stores health index
     var healthindex: Double = 0.0
     var selection1: Double = 0.0
@@ -82,7 +84,7 @@ class Page3ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         // stores health index value
         third.hindex = healthindex
         // accesses attribute from nsmanaged context using key value coding
-        healthindex = (Habitat.valueForKey("hindex") as? NSNumber!)!
+       // healthindex = (Habitat.valueForKey("hindex") as? NSNumber!)!
         
         // saves data
         do {
@@ -153,8 +155,9 @@ class Page3ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     var habitatdata: Habitat1!
     // saves attributes to habitat object
     func addhabitat1() {
-        let realm3 = try! Realm() // creates realm instance
-        try realm3.write { // creates write transition
+        let realm = try! Realm() // creates realm instance
+       try! realm.write { // creates write transition
+            do {
             let habitatcomponents = Habitat1() // creates an instance of habitat 1
             habitatcomponents.p1 = picker1selection
             habitatcomponents.p2 = picker2selection
@@ -165,8 +168,12 @@ class Page3ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             habitatcomponents.p7 = picker7selection
             habitatcomponents.p8 = picker8selection
             habitatcomponents.health = self.healthindex
-            realm3.add(habitatcomponents) // adds frontcomponents to realm
+            realm.add(habitatcomponents) // adds frontcomponents to realm
             self.habitatdata = habitatcomponents // assigns frontcomponents to habitatdata property
+          /*  catch let error as NSError {
+                print(" Could not fetch \(error), \(error.userInfo)")}
+                */
+            }
         }
     }
 
@@ -608,6 +615,7 @@ class Page3ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             let selection2 = picker4selection + picker5selection + picker6selection
             let selection3 = picker7selection + picker8selection
             healthindex = (selection1 + selection2 + selection3)/8
+            hdisplay.text = " The health index is \(healthindex) "
         }
     //}
 //}

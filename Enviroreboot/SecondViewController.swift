@@ -11,7 +11,7 @@ import CoreData
 import MobileCoreServices
 import RealmSwift
 class SecondViewController: UIViewController, UIImagePickerControllerDelegate,UINavigationControllerDelegate, UITextFieldDelegate, UITextInputTraits {
-    //
+    // outlets
     @IBOutlet weak var amount1: UILabel!
     @IBOutlet weak var step1: UIStepper!
     @IBOutlet weak var step2: UIStepper!
@@ -46,6 +46,7 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate,UI
     @IBOutlet weak var amount16: UILabel!
     @IBOutlet weak var step17: UIStepper!
     @IBOutlet weak var amount17: UILabel!
+    @IBOutlet weak var tdisplay: UILabel!
     
     // keyboard type 
  /*var keyboardType: UIKeyboardType {
@@ -100,23 +101,23 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate,UI
     // outlet for save label
     @IBOutlet weak var saved2: UILabel!
     // variables that convert bug amount text to int
-    var b1: Int = 0
-    var b2: Int = 0
-    var b3: Int = 0
-    var b4: Int = 0
-    var b5: Int = 0
-    var b6: Int = 0
-    var b7: Int = 0
-    var b8: Int = 0
-    var b9: Int = 0
-    var b10: Int = 0
-    var b11: Int = 0
-    var b12: Int = 0
-    var b13: Int = 0
-    var b14: Int = 0
-    var b15: Int = 0
-    var b16: Int = 0
-    var b17: Int = 0
+    var b1: Double = 0.0
+    var b2: Double = 0.0
+    var b3: Double = 0.0
+    var b4: Double = 0.0
+    var b5: Double = 0.0
+    var b6: Double = 0.0
+    var b7: Double = 0.0
+    var b8: Double = 0.0
+    var b9: Double = 0.0
+    var b10: Double = 0.0
+    var b11: Double = 0.0
+    var b12: Double = 0.0
+    var b13: Double = 0.0
+    var b14: Double = 0.0
+    var b15: Double = 0.0
+    var b16: Double = 0.0
+    var b17: Double = 0.0
     // intermediate variables
     var sensitive1: Int = 0
     var sensitive2: Int = 0
@@ -195,28 +196,45 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate,UI
     var bugsdata: bugs1!
     // saves attributes to bugs object
     func addbugs1() {
-        let realm2 = try! Realm() // creates realm instance
-        try realm2.write { // creates write transition
+        let realm = try! Realm() // creates realm instance
+        try! realm.write { // creates write transition
             let bugscomponents = bugs1() // creates an instance of bugs 1
             bugscomponents.m1 = self.step1.value
+            b1 = self.step1.value
             bugscomponents.m2 = self.step2.value
+            b2 = self.step2.value
             bugscomponents.m3 = self.step3.value
+            b3 = self.step3.value
             bugscomponents.m4 = self.step4.value
+            b4 = self.step4.value
             bugscomponents.m5 = self.step5.value
+            b5 = self.step5.value
             bugscomponents.m6 = self.step6.value
+            b6 = self.step6.value
             bugscomponents.m7 = self.step7.value
+            b7 = self.step7.value
             bugscomponents.m8 = self.step8.value
+            b8 = self.step8.value
             bugscomponents.m9 = self.step9.value
+            b9 = self.step9.value
             bugscomponents.m10 = self.step10.value
+            b10 = self.step10.value
             bugscomponents.m11 = self.step11.value
+            b11 = self.step11.value
             bugscomponents.m12 = self.step12.value
+            b12 = self.step12.value
             bugscomponents.m13 = self.step13.value
+            b13 = self.step13.value
             bugscomponents.m14 = self.step14.value
+            b14 = self.step14.value
             bugscomponents.m15 = self.step15.value
+            b15 = self.step15.value
             bugscomponents.m16 = self.step16.value
+            b16 = self.step16.value
             bugscomponents.m17 = self.step17.value
+            b17 = self.step17.value
            bugscomponents.tolerance = self.Tindex
-            realm2.add(bugscomponents) // adds frontcomponents to realm
+            realm.add(bugscomponents) // adds frontcomponents to realm
             self.bugsdata = bugscomponents // assigns frontcomponents to frontdata property
         }
     }
@@ -224,7 +242,7 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate,UI
     
     // action for saved entries button
     @IBAction func savedtwo(sender: AnyObject) {
-        
+        /*
         // creates entity description
        let entityDescription = NSEntityDescription.entityForName("Bugs", inManagedObjectContext: managedObjectContext)
         // second is an instance of the bugs identity
@@ -267,10 +285,11 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate,UI
         // saves tolerance index
         second.tolerance = Tindex
         // accesses attribute from nsmanaged context using key value coding
-        Tindex = (Bugs.valueForKey("tolerance") as? NSNumber!)!
+        //T index = (Bugs.valueForKey("tolerance") as? NSNumber!)!
         // saves Tindex into array
         //ttracker[0] = Tindex
         // saves data
+*/
         do {
             
             try managedObjectContext.save()
@@ -283,7 +302,7 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate,UI
         }
     }
     // Calculates tolerance index
-    func calculatetolerance(b1:Int,b2:Int,b3:Int,b4:Int,b5:Int,b6:Int,b7:Int, b8:Int, b9:Int, b10:Int,b11:Int, b12:Int,b13:Int,b14:Int, b15:Int,b16:Int, b17:Int) {
+    func calculatetolerance(b1:Double,b2:Double,b3:Double,b4:Double,b5:Double,b6:Double,b7:Double, b8:Double, b9:Double, b10:Double,b11:Double, b12:Double,b13:Double,b14:Double, b15:Double,b16:Double, b17:Double) {
         // variables that calculate index for each group
         // several intermediate variables were recorded as xcode cannot handle arithmetic operations with many quantities
         //first 9 organisms are sensitive
@@ -300,6 +319,7 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate,UI
         let tolerant2 = 4*(b16+b17)
         // tolerance index is the sum of the groups divided by 27 organisms
         Tindex = (sensitive1 + sensitive2 + semisensitive1 + semisensitive2 + semitolerant1 + semitolerant2 + tolerant1 + tolerant2)/17
+        tdisplay.text = "The tolerance index is \(Tindex)"
     }
     
     //loads camera to take pictures of unknown organisms

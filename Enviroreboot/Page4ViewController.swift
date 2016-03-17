@@ -19,8 +19,8 @@ class Page4ViewController: UIViewController {
     //accesses managed object context
     let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     // temporary variables to store index values
-    var tretrieve: NSNumber = 0.0
-    var hretrieve: NSNumber = 0.0
+   lazy var tretrieve: Double = 0.0
+   lazy var hretrieve: Double = 0.0
     //  tretrieve = viewcontroller2ViewController.ViewDidLoad(bugstracker)
     //  hretrieve = page3ViewController.ViewDidLoad(htracker)
     
@@ -33,13 +33,21 @@ class Page4ViewController: UIViewController {
     //  let match = results[0] as! NSManagedObject
     //  let healthind = match.valueforKey("hindex") as! Double
     // displayhealth.text = "Health index is \(healthind)"
-    func updateindexes(tretrieve:NSNumber, hretrieve:NSNumber) {
+    func updateindexes(var tretrieve:Double, var hretrieve:Double) {
+        /*
+        let realm = try! Realm()
+        let predicatet = NSPredicate(format: "tolerance >= 0.0")
+        let predicateh = NSPredicate(format: "health != -1")
+        tretrieve = realm.objects(bugs1).filter(predicatet)
+        hretrieve = realm.objects(Habitat1).filter(predicateh)
         displayhealth.text = "The Health Index for the stream's habitat is \(hretrieve)"
         displaytolerance.text = " The Tolerance Index for the stream is \(tretrieve)"
+        */
     }
     
     // this function saves all of the data from the entire application
     @IBAction func saveall(sender: AnyObject) {
+        /*
         let entityDescription = NSEntityDescription.entityForName("Habitat", inManagedObjectContext: managedObjectContext)
 
         let request = NSFetchRequest(entityName:"Habitat")
@@ -63,7 +71,7 @@ class Page4ViewController: UIViewController {
         catch let error as NSError {
             saveproject.text = error.localizedFailureReason ; "please try again"
         }
-
+*/
     }
     
     // this function returns all of the elements to their default values

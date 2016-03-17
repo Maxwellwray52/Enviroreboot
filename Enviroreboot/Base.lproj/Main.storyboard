@@ -392,6 +392,12 @@
                                     <action selector="step5value:" destination="8rJ-Kc-sve" eventType="valueChanged" id="mM7-cN-W8y"/>
                                 </connections>
                             </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tolerance Index:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D5R-oC-hfr">
+                                <rect key="frame" x="384" y="667" width="237" height="49"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -433,6 +439,7 @@
                         <outlet property="step7" destination="SVh-pb-zAj" id="DNz-eG-goQ"/>
                         <outlet property="step8" destination="LEl-GD-LpN" id="fog-Nl-ZQL"/>
                         <outlet property="step9" destination="bmK-fs-oKN" id="vv8-WU-s5K"/>
+                        <outlet property="tdisplay" destination="D5R-oC-hfr" id="Yuj-sa-525"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
@@ -454,78 +461,11 @@
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="h0k-rB-JDa" kind="relationship" relationship="viewControllers" id="Uo1-N4-udK"/>
                         <segue destination="fSB-MP-MDr" kind="relationship" relationship="viewControllers" id="x5H-8J-1ew"/>
-                        <segue destination="Tu5-9d-1Ln" kind="relationship" relationship="viewControllers" id="Gvd-nW-1fF"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="662" y="-208"/>
-        </scene>
-        <!--Page 5-->
-        <scene sceneID="4wY-wN-74q">
-            <objects>
-                <tableViewController restorationIdentifier="page5" title="Page 5" id="RD1-tb-ihX" customClass="pg5TableViewController" customModule="Enviroreboot" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="i6a-ZE-Iv5">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Te0-ag-h4R" customClass="displayrecordsTableViewCell" customModule="Enviroreboot" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Te0-ag-h4R" id="NwC-SC-aOa">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Record -" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1x9-gR-7Kh">
-                                            <rect key="frame" x="19" y="8" width="282" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="displayentries" destination="1x9-gR-7Kh" id="FN5-B9-cP3"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="Ih9-gu-4iv">
-                        <barButtonItem key="leftBarButtonItem" title="getrecords" id="rOL-TV-nrP">
-                            <connections>
-                                <action selector="getrecords:" destination="RD1-tb-ihX" id="4It-Kx-AQs"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="add" id="o6n-Ib-7un">
-                            <connections>
-                                <action selector="adddata:" destination="RD1-tb-ihX" id="uXV-Ye-24c"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="a6G-ur-heh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-17" y="-10"/>
-        </scene>
-        <!--Item-->
-        <scene sceneID="tdE-Ca-hVM">
-            <objects>
-                <viewController id="Tu5-9d-1Ln" customClass="page5ViewController" customModule="Enviroreboot" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Jgm-N1-SqR"/>
-                        <viewControllerLayoutGuide type="bottom" id="esG-6e-LHJ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="tcG-I8-Mvi">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="dmm-hj-jFn"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xDd-rV-k6O" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-31" y="-134"/>
         </scene>
         <!--Page 4-->
         <scene sceneID="Dc6-3g-0An">
@@ -714,6 +654,12 @@
                                     <outlet property="delegate" destination="h0k-rB-JDa" id="l8L-2G-9lM"/>
                                 </connections>
                             </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Health Index:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eoo-ux-Qqg">
+                                <rect key="frame" x="154" y="793" width="213" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -723,6 +669,7 @@
                         <outlet property="bottompickerlabel" destination="HH9-81-c4X" id="YIu-Yw-KhS"/>
                         <outlet property="erosionpickerlabel" destination="LQ9-JU-YIl" id="mQS-ht-oAf"/>
                         <outlet property="flowlevelpickerlabel" destination="ii9-QK-k9T" id="0Mx-SK-Ovr"/>
+                        <outlet property="hdisplay" destination="eoo-ux-Qqg" id="tIB-Mx-1jv"/>
                         <outlet property="odorpickerlabel" destination="bZh-3k-V3P" id="e6M-5g-VAK"/>
                         <outlet property="picker1" destination="2du-e6-bTh" id="jTV-Ma-ckX"/>
                         <outlet property="picker2" destination="sVv-3V-n6w" id="GZX-H2-9de"/>
