@@ -266,48 +266,48 @@ class Page3ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
           // erosionpickerlabel.text = "Bank Erosion\(picker2data[row]) "
             // assigns option to a numerical value
             if (row == 0) {
-                picker1selection = 4.0;
+                picker2selection = 4.0;
             }
             if (row==1) {
-                picker1selection = 3.0;
+                picker2selection = 3.0;
             }
             if (row==2) {
-                picker1selection = 2.0;
+                picker2selection = 2.0;
             }
             if (row == 3) {
-                picker1selection = 0.0;
+                picker2selection = 0.0;
             }
         }
         else if(pickerview.tag == 3) {
           //  vegetationpickerlabel.text = "Bank Vegetation \(picker3data[row]) "
             // assigns option to a numerical value
             if (row == 0) {
-                picker1selection = 4.0;
+                picker3selection = 4.0;
             }
             if (row==1) {
-                picker1selection = 3.0;
+                picker3selection = 3.0;
             }
             if (row==2) {
-                picker1selection = 2.0;
+                picker3selection = 2.0;
             }
             if (row == 3) {
-                picker1selection = 0.0;
+                picker3selection = 0.0;
             }
         }
        else if(pickerview.tag == 4) {
            // streamcoverpickerlabel.text = "Stream Cover \(picker4data[row]) "
             // assigns option to a numerical value
             if (row == 0) {
-                picker1selection = 4.0;
+                picker4selection = 4.0;
             }
             if (row==1) {
-                picker1selection = 3.0;
+                picker4selection = 3.0;
             }
             if (row==2) {
-                picker1selection = 2.0;
+                picker4selection = 2.0;
             }
             if (row == 3) {
-                picker1selection = 0.0;
+                picker4selection = 0.0;
             }
         }
 
@@ -315,66 +315,67 @@ class Page3ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
            // odorpickerlabel.text = "Water odor \(picker5data[row]) "
             // assigns option to a numerical value
             if (row == 0) {
-                picker1selection = 4.0;
+                picker5selection = 4.0;
             }
             if (row==1) {
-                picker1selection = 3.0;
+                picker5selection = 3.0;
             }
             if (row==2) {
-                picker1selection = 2.0;
+                picker5selection = 2.0;
             }
             if (row == 3) {
-                picker1selection = 0.0;
+                picker5selection = 0.0;
             }
         }
         else if(pickerview.tag == 6) {
            // bottompickerlabel.text = "Stream Bottom \(picker6data[row]) "
             // assigns option to a numerical value
             if (row == 0) {
-                picker1selection = 4.0;
+                picker6selection = 4.0;
             }
             if (row==1) {
-                picker1selection = 3.0;
+                picker6selection = 3.0;
             }
             if (row==2) {
-                picker1selection = 2.0;
+                picker6selection = 2.0;
             }
             if (row == 3) {
-                picker1selection = 0.0;
+                picker6selection = 0.0;
             }
         }
        else if(pickerview.tag == 7) {
            // flowlevelpickerlabel.text = "Flow Level \(picker7data[row]) "
             // assigns option to a numerical value
             if (row == 0) {
-                picker1selection = 4.0;
+                picker7selection = 4.0;
             }
             if (row==1) {
-                picker1selection = 3.0;
+                picker7selection = 3.0;
             }
             if (row==2) {
-                picker1selection = 2.0;
+                picker7selection = 2.0;
             }
             if (row == 3) {
-                picker1selection = 0.0;
+                picker7selection = 0.0;
             }
         }
-    else { //(picker8.tag == 7)
+    else { //(picker8.tag == 8)
            // varietypickerlabel.text = "Habitat Variety \(picker8data[row]) "
             // assigns option to a numerical value
             if (row == 0) {
-                picker1selection = 4.0;
+                picker8selection = 4.0;
             }
             if (row==1) {
-                picker1selection = 3.0;
+                picker8selection = 3.0;
             }
             if (row==2) {
-                picker1selection = 2.0;
+                picker8selection = 2.0;
             }
             if (row == 3) {
-                picker1selection = 0.0;
+                picker8selection = 0.0;
             }
         }
+        hdisplay.text = " \((picker1selection + picker2selection + picker3selection + picker4selection + picker5selection + picker6selection + picker7selection + picker8selection)/8.0) "
     }
     /*
 //}

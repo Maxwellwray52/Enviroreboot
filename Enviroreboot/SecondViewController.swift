@@ -119,14 +119,14 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate,UI
     var b16: Double = 0.0
     var b17: Double = 0.0
     // intermediate variables
-    var sensitive1: Int = 0
-    var sensitive2: Int = 0
-    var semisensitive1: Int = 0
-    var semisensitive2: Int = 0
-    var semitolerant1: Int = 0
-    var semitolerant2: Int = 0
-    var tolerant1: Int = 0
-    var tolerant2: Int = 0
+    var sensitive1: Double = 0.0
+    var sensitive2: Double = 0.0
+    var semisensitive1: Double = 0.0
+    var semisensitive2: Double = 0.0
+    var semitolerant1: Double = 0.0
+    var semitolerant2: Double = 0.0
+    var tolerant1: Double = 0.0
+    var tolerant2: Double = 0.0
     // variable that stores tolerance value
     var Tindex: Double = 0.0
     // array for tolerance index
@@ -140,9 +140,14 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate,UI
     // updates labels 
     @IBAction func step1value(sender: AnyObject) {
         amount1.text = " \(Int(step1.value).description)"
+        var a: String = ""
+        a = amount1.text!
     }
     @IBAction func step2value(sender: AnyObject) {
          amount2.text = " \(Int(step2.value).description)"
+        var a2: String = ""
+        a2 = amount2.text!
+        tdisplay.text = " \(a2)"
     }
     @IBAction func step3value(sender: AnyObject) {
          amount3.text = " \(Int(step3.value).description)"
@@ -200,9 +205,9 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate,UI
         try! realm.write { // creates write transition
             let bugscomponents = bugs1() // creates an instance of bugs 1
             bugscomponents.m1 = self.step1.value
-            b1 = self.step1.value
+          //  b1 = Double(step1.value)
             bugscomponents.m2 = self.step2.value
-            b2 = self.step2.value
+            b2 = Double(step2.value)
             bugscomponents.m3 = self.step3.value
             b3 = self.step3.value
             bugscomponents.m4 = self.step4.value
@@ -307,7 +312,7 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate,UI
         // several intermediate variables were recorded as xcode cannot handle arithmetic operations with many quantities
         //first 9 organisms are sensitive
         let sensitive1 = 1*(b1+b2)
-        let sensitive2 = 1*(b3+b4)
+        /*let sensitive2 = 1*(b3+b4)
         // next 6 organisms are semisensitive and are mutilplied by 2
         let semisensitive1 = 2*(b5+b6+b7)
         let semisensitive2 = 2*(b8+b9)
@@ -317,9 +322,9 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate,UI
         // last 6 oganisms are tolerant and are multiplied by 4
         let tolerant1 = 4*(b14+b15)
         let tolerant2 = 4*(b16+b17)
-        // tolerance index is the sum of the groups divided by 27 organisms
-        Tindex = (sensitive1 + sensitive2 + semisensitive1 + semisensitive2 + semitolerant1 + semitolerant2 + tolerant1 + tolerant2)/17
-        tdisplay.text = "The tolerance index is \(Tindex)"
+        */// tolerance index is the sum of the groups divided by 27 organisms
+        Tindex = sensitive1
+        //tdisplay.text = "The tolerance index is \(Tindex)"
     }
     
     //loads camera to take pictures of unknown organisms
