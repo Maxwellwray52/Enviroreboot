@@ -47,7 +47,8 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate,UI
     @IBOutlet weak var step17: UIStepper!
     @IBOutlet weak var amount17: UILabel!
     @IBOutlet weak var tdisplay: UILabel!
-    
+    //stores tolerance data from label
+    var gett: String = " "
     // keyboard type 
  /*var keyboardType: UIKeyboardType {
     get {
@@ -140,59 +141,78 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate,UI
     // updates labels 
     @IBAction func step1value(sender: AnyObject) {
         amount1.text = " \(Int(step1.value).description)"
-        var a: String = ""
-        a = amount1.text!
+        self.b1 = Double(step1.value)
+       // tdisplay.text = "\(b1)"
     }
     @IBAction func step2value(sender: AnyObject) {
          amount2.text = " \(Int(step2.value).description)"
-        var a2: String = ""
-        a2 = amount2.text!
-        tdisplay.text = " \(a2)"
-    }
+        self.b2 = Double(step2.value)
+        }
     @IBAction func step3value(sender: AnyObject) {
          amount3.text = " \(Int(step3.value).description)"
+        self.b3 = Double(step3.value)
     }
     @IBAction func step4value(sender: AnyObject) {
          amount4.text = " \(Int(step4.value).description)"
+        self.b4 = Double(step4.value)
+        sensitive1 = b1+b2+b3+b4
     }
     @IBAction func step5value(sender: AnyObject) {
          amount5.text = " \(Int(step5.value).description)"
+        self.b5 = Double(step5.value)
     }
     @IBAction func step6value(sender: AnyObject) {
          amount6.text = " \(Int(step6.value).description)"
+        self.b6 = Double(step6.value)
     }
     @IBAction func step7value(sender: AnyObject) {
          amount7.text = " \(Int(step7.value).description)"
+        self.b7 = Double(step7.value)
     }
     @IBAction func step8value(sender: AnyObject) {
          amount8.text = " \(Int(step8.value).description)"
+        self.b8 = Double(step8.value)
     }
     @IBAction func step9value(sender: AnyObject) {
          amount9.text = " \(Int(step9.value).description)"
+        self.b9 = Double(step9.value)
+         semisensitive1 = 2*(b5+b6+b7+b8+b9)
     }
     @IBAction func step10value(sender: AnyObject) {
          amount10.text = " \(Int(step10.value).description)"
+        self.b10 = Double(step10.value)
     }
     @IBAction func step11value(sender: AnyObject) {
          amount11.text = " \(Int(step11.value).description)"
+        self.b11 = Double(step11.value)
     }
     @IBAction func step12value(sender: AnyObject) {
          amount12.text = " \(Int(step12.value).description)"
+        self.b12 = Double(step12.value)
     }
     @IBAction func step13value(sender: AnyObject) {
          amount13.text = " \(Int(step13.value).description)"
+        self.b13 = Double(step13.value)
+        semitolerant1 = 3*(b10+b11+b12+b13)
     }
     @IBAction func step14value(sender: AnyObject) {
          amount14.text = " \(Int(step14.value).description)"
+        self.b14 = Double(step14.value)
     }
     @IBAction func step15value(sender: AnyObject) {
          amount15.text = "\(Int(step15.value).description)"
-    }
+        self.b15 = Double(step15.value)
+        }
     @IBAction func step16value(sender: AnyObject) {
          amount16.text = " \(Int(step16.value).description)"
+        self.b16 = Double(step16.value)
     }
     @IBAction func step17value(sender: AnyObject) {
          amount17.text = " \(Int(step17.value).description)"
+        self.b17 = Double(step17.value)
+        tolerant1 = 4*(b14+b15+b16+b17)
+        tdisplay.text = "\((sensitive1 + semisensitive1 + semitolerant1 + tolerant1)/17.0)"
+        gett = tdisplay.text!
     }
    
  
@@ -205,7 +225,7 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate,UI
         try! realm.write { // creates write transition
             let bugscomponents = bugs1() // creates an instance of bugs 1
             bugscomponents.m1 = self.step1.value
-          //  b1 = Double(step1.value)
+           b1 = Double(step1.value)
             bugscomponents.m2 = self.step2.value
             b2 = Double(step2.value)
             bugscomponents.m3 = self.step3.value

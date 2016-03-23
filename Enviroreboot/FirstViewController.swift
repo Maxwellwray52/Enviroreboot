@@ -29,7 +29,6 @@ class FirstViewController: UIViewController {
     //var water2: String = "" // stores water slider label data
     // label that displays air temperature
     @IBOutlet weak var airtemp: UILabel!
-    
     var air1: Float = 0.0 // records air slider value
     // var air2 : String = "" // stores air slider label data
     //  override func viewDidLoad() {

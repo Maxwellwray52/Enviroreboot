@@ -19,8 +19,8 @@ class Page4ViewController: UIViewController {
     //accesses managed object context
     let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     // temporary variables to store index values
-   lazy var tretrieve: Double = 0.0
-   lazy var hretrieve: Double = 0.0
+   //lazy var tretrieve: Double = 0.0
+  // lazy var hretrieve: Double = 0.0
     //  tretrieve = viewcontroller2ViewController.ViewDidLoad(bugstracker)
     //  hretrieve = page3ViewController.ViewDidLoad(htracker)
     
@@ -33,7 +33,8 @@ class Page4ViewController: UIViewController {
     //  let match = results[0] as! NSManagedObject
     //  let healthind = match.valueforKey("hindex") as! Double
     // displayhealth.text = "Health index is \(healthind)"
-    func updateindexes(var tretrieve:Double, var hretrieve:Double) {
+    func updateindexes(gett:String) {
+        displayhealth.text = "\(gett)"
         /*
         let realm = try! Realm()
         let predicatet = NSPredicate(format: "tolerance >= 0.0")
