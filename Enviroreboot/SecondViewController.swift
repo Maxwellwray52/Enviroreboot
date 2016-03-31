@@ -211,8 +211,9 @@ class SecondViewController: UIViewController, UIImagePickerControllerDelegate,UI
          amount17.text = " \(Int(step17.value).description)"
         self.b17 = Double(step17.value)
         tolerant1 = 4*(b14+b15+b16+b17)
-        tdisplay.text = "\((sensitive1 + semisensitive1 + semitolerant1 + tolerant1)/17.0)"
-        gett = tdisplay.text!
+        tdisplay.text = "\(round((sensitive1 + semisensitive1 + semitolerant1 + tolerant1)/17.0))"
+        
+        //gett = tdisplay.text!
     }
    
  

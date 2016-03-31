@@ -26,6 +26,7 @@ class FirstViewController: UIViewController {
     // label that displays temperature
     @IBOutlet weak var watertemp: UILabel!
     var water1: Float = 0.0 //records water slider value
+   // var water2 = NSString(format: "%.2f", water1)
     //var water2: String = "" // stores water slider label data
     // label that displays air temperature
     @IBOutlet weak var airtemp: UILabel!
@@ -78,12 +79,12 @@ class FirstViewController: UIViewController {
     // function that connects a label to a the water temperature slider so it can display the temp
     @IBAction func waterdisplay(sender: AnyObject) {
         water1 = waterslider.value // accesses water slider value as a float
-        watertemp.text = "Water temperature \(water1)" //displays value in label
+        watertemp.text = "Water temperature \(round((water1)))" //displays value in label
     }
     // allows label to display air temperature data from the slider
     @IBAction func airdisplay(sender: AnyObject) {
         air1 = temperatureSlider.value // acesses water slider value as a float
-        airtemp.text = " Air temperature \(air1)" //displays value in label
+        airtemp.text = " Air temperature \(round((air1)))" //displays value in label
     }
 
     override func viewDidLoad() {

@@ -401,7 +401,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Second" image="first" id="cPa-gy-q4n"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="amount1" destination="mF4-aT-sdP" id="KtQ-CF-gAf"/>
@@ -460,77 +460,11 @@
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="h0k-rB-JDa" kind="relationship" relationship="viewControllers" id="Uo1-N4-udK"/>
-                        <segue destination="fSB-MP-MDr" kind="relationship" relationship="viewControllers" id="x5H-8J-1ew"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="662" y="-208"/>
-        </scene>
-        <!--Page 4-->
-        <scene sceneID="Dc6-3g-0An">
-            <objects>
-                <viewController restorationIdentifier="page4" id="fSB-MP-MDr" customClass="Page4ViewController" customModule="Enviroreboot" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="xcC-Qk-KbG"/>
-                        <viewControllerLayoutGuide type="bottom" id="Ab2-sP-XbP"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ePw-hn-esA">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tolerance Index: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mY7-aL-9FE">
-                                <rect key="frame" x="85" y="59" width="213" height="42"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Health Index: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZx-98-WOT">
-                                <rect key="frame" x="85" y="147" width="233" height="39"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Environmental Analysis " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="uQW-qp-HrF">
-                                <rect key="frame" x="109" y="274" width="313" height="121"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4TC-Ys-UfF">
-                                <rect key="frame" x="295" y="463" width="83" height="30"/>
-                                <state key="normal" title="New Entries"/>
-                                <connections>
-                                    <action selector="newentry:" destination="fSB-MP-MDr" eventType="touchUpInside" id="BGt-9q-2MM"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FlB-JT-PXo">
-                                <rect key="frame" x="53" y="497" width="85" height="30"/>
-                                <state key="normal" title="Save Entries"/>
-                                <connections>
-                                    <action selector="saveall:" destination="fSB-MP-MDr" eventType="touchUpInside" id="ZnM-X4-WuV"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Saved?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oSr-RP-sK7">
-                                <rect key="frame" x="415" y="640" width="56" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Page 4" id="hU7-7P-hOd"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
-                    <connections>
-                        <outlet property="displayhealth" destination="mY7-aL-9FE" id="L0E-mv-O5a"/>
-                        <outlet property="displaytolerance" destination="GZx-98-WOT" id="RS3-ha-0Tj"/>
-                        <outlet property="saveproject" destination="oSr-RP-sK7" id="cbP-uV-0B2"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZlW-Jq-uku" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-751" y="1220"/>
         </scene>
         <!--Page 3-->
         <scene sceneID="n1K-Qs-dIr">
@@ -663,7 +597,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Page 3" id="hs4-pT-VJs"/>
+                    <tabBarItem key="tabBarItem" title="Page 3" image="second" id="hs4-pT-VJs"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="bottompickerlabel" destination="HH9-81-c4X" id="YIu-Yw-KhS"/>

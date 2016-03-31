@@ -124,12 +124,12 @@ class Page3ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         picker8.tag = 8;
         // inputs data into arrays
         picker1data = ["Clear", "Green", "Muddy", "Black/Oily"]
-        picker2data = ["None", "Small Soil Exposure", "Large soil and root Exposure","Full Exposure"]
+        picker2data = ["None", "Small Exposure", "Large Exposure","Full Exposure"]
         picker3data = ["Total Cover", "Sufficient Cover", "Half Cover", "Minimal Cover"]
         picker4data = ["Total Shade", "Partial Shade", "Mostly Sun", "Full Sun"]
         picker5data = ["None", "Earthy", "Rotten Eggs", "Sewage/Fishy"]
         picker6data = ["Large rocks no sediment", "Some rocks and sediment", "Mostly sediment", "no rocks"]
-        picker7data = ["Bottom not exposed", "Bottom Partially Exposed", " Bottom Mostly Exposed", "No Rocks"]
+        picker7data = ["Bottom not exposed", "Bottom Partially Exposed", "Bottom Mostly Exposed", "No Rocks"]
         picker8data = ["Deep pools varied runs & riffles", "Shallow pools, runs & riffles", "only riffles and runs", "mostly runs"]
         
         // fetches data
@@ -616,7 +616,7 @@ class Page3ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             let selection2 = picker4selection + picker5selection + picker6selection
             let selection3 = picker7selection + picker8selection
             healthindex = (selection1 + selection2 + selection3)/8
-            hdisplay.text = " The health index is \(healthindex) "
+            hdisplay.text = " The health index is \(round((healthindex))) "
         }
     //}
 //}
